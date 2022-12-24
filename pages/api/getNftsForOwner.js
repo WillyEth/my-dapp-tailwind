@@ -32,21 +32,3 @@ export default async function handler(req, res) {
   return
 }
 
-// const endpoint = 'api/getNftsForOwner'
-// const data = { address: '0x6773dbde750df65520379760a3ede6027e273d9e' }
-
-// fetch(endpoint, {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(data),
-// })
-//   .then((response) => response.json())
-//   .then((nfts) => {
-//     // do something with the array of NFTs
-//     console.log(nfts)
-//   })
-//   .catch((error) => {
-//     // handle error
-//   })

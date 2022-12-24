@@ -4,7 +4,7 @@ export default function MetaTags({
   title = 'Crypto Research Hub',
   description = 'Doing your own research in crypto refers to the practice of taking the time to learn and understand cryptocurrencies and the market for them. This often includes reading up on the latest news and developments in the space, analyzing market trends and data, and forming your own opinions and investment strategies based on the information you have gathered. By taking the time to do your own research, you can make informed decisions about your investments in cryptocurrencies and potentially increase your chances of success in the market.',
   image = '../public/twitter.png',
-   URL = 'https://nextjs-drab-kappa-57.vercel.app/',
+  URL = 'https://my-dapp-tailwind.vercel.app/',
 }) {
   return (
     <Head>
@@ -21,14 +21,20 @@ export default function MetaTags({
       <meta property="og:url" content={URL} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="../public/twitter.png" />
+      <meta
+        property="og:image"
+        content="https://my-dapp-tailwind.vercel.app/"
+      />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={URL} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content="../public/twitter.png"></meta>
+      <meta
+        property="twitter:image"
+        content="https://my-dapp-tailwind.vercel.app/"
+      ></meta>
 
       <meta
         name="keywords"

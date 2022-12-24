@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 
 const navigation = [
-  { name: 'Splash', href: '/', current: true },
+  { name: 'PayLoad', href: '/', current: true },
   { name: 'Discover', href: '/Team', current: false },
   { name: 'Mint Nft', href: '#', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
