@@ -5,14 +5,15 @@ import { Inter } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 const Layout = ({ children }) => {
+  console.log("Layout")
   return (
-    <div>
-      <main className={`${inter.variable} font-sans`}>
-        <Banner />
-        <Header />
-        <div>{children}</div>
-      </main>
-    </div>
+   <>
+      <main className={`${inter.variable} font-sans`} >
+      <Banner />
+      <Header />
+      {children}
+    </main>  
+  </>
   )
 }
 

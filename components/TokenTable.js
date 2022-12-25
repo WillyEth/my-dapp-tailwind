@@ -7,7 +7,7 @@ export default function TokenTable({ tokenObject }) {
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">Scan</h1>
           <p className="mt-2 text-sm text-gray-700">
-            Do not buy/sell/trandfer unknown tokens
+            Do not buy/sell/transfer unknown tokens
           </p>
         </div>
         {/* <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">

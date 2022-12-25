@@ -28,6 +28,7 @@ const notificationMethods = [
 
 export default function WalletScanNft() {
   // const [wallet, setWallet] = React.useState()
+  console.log('WalletScanNft')
   const [nftObject, setNftObject] = React.useState(null)
   const [isError, setIsError] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
@@ -82,8 +83,9 @@ export default function WalletScanNft() {
             <div>
               <Image
                 className="mx-auto"
-                width="40"
-                height="40"
+                width={40}
+                height={40}
+                priority
                 src="/hacker.png"
                 alt="Crypto Research Hub"
               />

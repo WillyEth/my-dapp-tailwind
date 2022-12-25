@@ -61,8 +61,9 @@ export default function WalletScanToken() {
             <div>
               <Image
                 className="mx-auto"
-                width="40"
-                height="40"
+                width={40}
+                height={40}
+                priority
                 src={HackerLogo}
                 alt="Crypto Research Hub"
               />
