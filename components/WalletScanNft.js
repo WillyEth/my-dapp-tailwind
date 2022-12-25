@@ -6,6 +6,9 @@ import Image from 'next/image'
 import { SERVER } from '../constants'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import { resolveLink } from '../utils/general'
+import HackerLogo from '../public/hacker.png'
+ 
+
 
 // const endpoint = 'api/getNftsForOwner'
 // const data = { address: '0x6773dbde750df65520379760a3ede6027e273d9e' }
@@ -77,8 +80,10 @@ export default function WalletScanNft() {
         <div className="flex min-h-full items-center justify-center py-5 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-md space-y-8">
             <div>
-              <img
-                className="mx-auto h-12 w-auto"
+              <Image
+                className="mx-auto"
+                width="40"
+                height="40"
                 src="/hacker.png"
                 alt="Crypto Research Hub"
               />
