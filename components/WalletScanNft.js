@@ -2,6 +2,7 @@ import * as React from 'react'
 import NftImages from './NftImages'
 import AlertScan from './AlertScan'
 import Spinner from './Spinner'
+import Image from 'next/image'
 import { SERVER } from '../constants'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import { resolveLink } from '../utils/general'
@@ -82,7 +83,7 @@ export default function WalletScanNft() {
                 alt="Crypto Research Hub"
               />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-gray-900">
-                Token Wallet Scan
+                NFT Wallet Scan
               </h2>
               <p className="mt-2 text-center text-sm text-gray-600">
                 discover whats inside{' '}
