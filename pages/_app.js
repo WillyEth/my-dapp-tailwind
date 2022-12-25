@@ -5,10 +5,10 @@ import Layout from '../components/Layout'
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${inter.variable} font-sans`}>
+    // <main className={`${inter.variable} font-sans`}>
     <Layout>
       <Component {...pageProps} />
+      {/* </main> */}
     </Layout>
-    </main>
   )
 }

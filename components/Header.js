@@ -47,6 +47,7 @@ export default function Header() {
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
+                    priority={true}
                     className="block h-8 w-8 lg:hidden"
                   />
                   {/* <img
@@ -60,6 +61,7 @@ export default function Header() {
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
+                    priority={true}
                     className="hidden lg:block"
                   />
                 </div>
