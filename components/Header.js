@@ -9,7 +9,7 @@ import HackerLogo from '../public/hacker.png'
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
   { name: 'Discover', href: '/Team', current: false },
-  { name: 'Mint Nft', href: 'error', current: false },
+  { name: 'Mint Nft', href: '/mintPage', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
 ]
@@ -21,7 +21,7 @@ function classNames(...classes) {
 export default function Header() {
   const router = useRouter()
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-poly8">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -75,8 +75,8 @@ export default function Header() {
                         href={item.href}
                         className={classNames(
                           item.href === router.pathname
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            ? 'bg-poly6 text-white'
+                            : 'text-poly1 hover:bg-poly4 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         // aria-current={item.href ? 'page' : undefined}

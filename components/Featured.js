@@ -83,7 +83,7 @@ export default function Featured() {
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-polyO5 text-white">
                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
                   <p className="mt-6 text-lg font-semibold leading-8 text-gray-900">
