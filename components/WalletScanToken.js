@@ -55,7 +55,8 @@ export default function WalletScanToken() {
 
   return (
     <>
-      <div className="container mx-auto sm:px-6 lg:px-8">
+      {/* <div className="container mx-auto sm:px-6 lg:px-8"> */}
+      <div className=" relative mx-auto max-w-7xl py-1 px-6 sm:py-1 lg:px-8 lg:py-1">
         <div className="flex min-h-full items-center justify-center py-5 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-md space-y-8">
             <div>

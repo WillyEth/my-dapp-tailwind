@@ -2,13 +2,14 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Image from 'next/image'
 import HackerLogo from '../public/hacker.png'
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
   { name: 'Discover', href: '/Team', current: false },
-  { name: 'Mint Nft', href: '#', current: false },
+  { name: 'Mint Nft', href: 'error', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
 ]
@@ -43,33 +44,33 @@ export default function Header() {
                     src="/hacker.png"
                     alt="Your Company"
                   /> */}
-                  {/* <Image
+                  <Image
                     src={HackerLogo}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
                     priority
                     className="block h-8 w-8 lg:hidden"
-                  /> */}
+                  />
                   {/* <img
                     className="hidden h-8 w-auto lg:block"
                     src="/hacker.png"
                     alt="Your Company"
 
                   /> */}
-                  {/* <Image
+                  <Image
                     src={HackerLogo}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
                     priority
                     className="hidden lg:block"
-                  /> */}
+                  />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
                         href={item.href}
                         className={classNames(
@@ -81,7 +82,7 @@ export default function Header() {
                         // aria-current={item.href ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
