@@ -43,28 +43,28 @@ export default function Header() {
                     src="/hacker.png"
                     alt="Your Company"
                   /> */}
-                  <Image
+                  {/* <Image
                     src={HackerLogo}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
                     priority
                     className="block h-8 w-8 lg:hidden"
-                  />
+                  /> */}
                   {/* <img
                     className="hidden h-8 w-auto lg:block"
                     src="/hacker.png"
                     alt="Your Company"
 
                   /> */}
-                  <Image
+                  {/* <Image
                     src={HackerLogo}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
                     priority
                     className="hidden lg:block"
-                  />
+                  /> */}
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

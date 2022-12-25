@@ -86,7 +86,7 @@ export default function WalletScanNft() {
                 width={40}
                 height={40}
                 priority
-                src="/hacker.png"
+                src={HackerLogo}
                 alt="Crypto Research Hub"
               />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-gray-900">
