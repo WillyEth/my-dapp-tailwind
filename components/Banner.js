@@ -15,8 +15,8 @@ export default function Banner() {
             <p className="ml-3 truncate font-medium text-white">
               <span className="md:hidden"> Alpha 1.0 Crypto Research Hub</span>
               <span className="hidden md:inline">
-                Big news! We're excited to announce Alpha 1.0 of The Crypto Research
-                Hub.
+                Big news! We're excited to announce Alpha 1.0 become a Crypto
+                Research Guru
               </span>
             </p>
           </div>
@@ -34,7 +34,10 @@ export default function Banner() {
               className="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
             >
               <span className="sr-only">Dismiss</span>
-              <XMarkIcon className="sm: hidden h-6 w-6 text-white" aria-hidden="true" />
+              <XMarkIcon
+                className="sm: hidden h-6 w-6 text-white"
+                aria-hidden="true"
+              />
             </button>
           </div>
         </div>

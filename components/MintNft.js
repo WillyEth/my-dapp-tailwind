@@ -38,7 +38,7 @@ const product = {
       id: 2,
       name: 'Angled view',
       // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/hacker.png',
+      src: '/guru.png',
       alt: 'Nft Image',
     },
     {

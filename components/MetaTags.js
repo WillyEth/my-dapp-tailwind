@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export default function MetaTags({
-  title = 'Crypto Research Hub',
+  title = 'Crypto Research Guru',
   description = 'Doing your own research in crypto refers to the practice of taking the time to learn and understand cryptocurrencies and the market for them. This often includes reading up on the latest news and developments in the space, analyzing market trends and data, and forming your own opinions and investment strategies based on the information you have gathered. By taking the time to do your own research, you can make informed decisions about your investments in cryptocurrencies and potentially increase your chances of success in the market.',
   image = '../public/twitter.png',
   URL = 'https://my-dapp-tailwind.vercel.app/',
@@ -12,7 +12,7 @@ export default function MetaTags({
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="@btwit71" />
       {/* {<!-- Primary Meta Tags --> */}
-      <title>Crypto Research Hub</title>
+      <title>Crypto Research Guru</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 
@@ -38,7 +38,7 @@ export default function MetaTags({
 
       <meta
         name="keywords"
-        content="crypto, research, bitcoin, etherum, DYOR, hub"
+        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT"
       />
       <meta name="author" content="Willy Eth" />
       <meta name="copyright" content="Copyright Willy Eth 2023" />

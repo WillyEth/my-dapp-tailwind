@@ -2,6 +2,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import HackerLogo from '../public/hacker.png'
+import Guru from '../public/guru.png'
 
 // const endpoint = 'api/getNftsForOwner'
 // const data = { address: '0x6773dbde750df65520379760a3ede6027e273d9e' }
@@ -29,10 +30,10 @@ export default function FormWallet({ handleSubmit, title, description }) {
             <div>
               <Image
                 className="mx-auto"
-                width={40}
+                width={80}
                 height={40}
                 priority
-                src={HackerLogo}
+                src={Guru}
                 alt="Crypto Research Hub"
               />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">
@@ -41,7 +42,7 @@ export default function FormWallet({ handleSubmit, title, description }) {
               <p className="mt-2 text-center text-sm text-gray-600">
                 discover whats inside{' '}
                 <a href="#" className="font-medium text-poly7 hover:text-poly6">
-                  before Mr. Hacker
+                  become a Guru
                 </a>
               </p>
             </div>

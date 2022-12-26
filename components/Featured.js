@@ -27,7 +27,7 @@ const features = [
   {
     name: 'Project Goals',
     description:
-      'Our goal is to provide the best crypto research hub on the web.',
+      'Mission is to provide the best crypto research on the web to become a Crytpo Research Guru.',
     icon: TrophyIcon,
   },
 ]

@@ -6,7 +6,7 @@ import Featured from '../components/Featured'
 export default function Home() {
   return (
     <>
-      <Metatags title="Crypto Research Hub" />
+      <Metatags title="Crypto Research Guru" />
       <Featured />
     </>
   )

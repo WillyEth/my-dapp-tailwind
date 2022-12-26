@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 import HackerLogo from '../public/hacker.png'
+import Guru from '../public/guru.png'
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
@@ -45,7 +46,7 @@ export default function Header() {
                     alt="Your Company"
                   /> */}
                   <Image
-                    src={HackerLogo}
+                    src={Guru}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
@@ -59,7 +60,7 @@ export default function Header() {
 
                   /> */}
                   <Image
-                    src={HackerLogo}
+                    src={Guru}
                     alt="Crypto Research Hub"
                     width={40}
                     height={42}
