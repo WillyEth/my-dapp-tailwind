@@ -20,6 +20,7 @@ import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import poweredByWhite from '../public/poweredbyWhite.svg'
 import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const product = {
   name: 'By Minting this NFT',
@@ -44,7 +45,7 @@ const product = {
       id: 3,
       name: 'Angled view',
       // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/bnb-icon.png',
+      src: '/bnb-bnb-logo.svg',
       alt: 'Nft Image',
     },
     {
@@ -114,9 +115,9 @@ export default function MintNft() {
               {/* Image selector */}
               <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
                 <Tab.List className="grid grid-cols-4 gap-6">
-                  {product.images.map((image) => (
+                  {product.images.map((image, index) => (
                     <Tab
-                      key={image.id}
+                      key={index}
                       className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-gray-900 hover:bg-poly3 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                     >
                       {({ selected }) => (
@@ -158,6 +159,22 @@ export default function MintNft() {
 
             {/* Product info */}
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+              <div className="flex justify-between ">
+                <ConnectButton
+                  accountStatus={{
+                    smallScreen: 'address',
+                    largeScreen: 'full',
+                  }}
+                />
+
+                <Image
+                  src={poweredByWhite}
+                  alt="Powered by PolyGon"
+                  width={231}
+                  height={44}
+                  className="pl-10"
+                />
+              </div>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 {product.name}
               </h1>
@@ -168,7 +185,6 @@ export default function MintNft() {
                   <p className="text-3xl tracking-tight text-gray-900">
                     {product.price}
                   </p>
-                  <Image src={poweredByWhite} width={231} height={44} />
                 </div>
               </div>
 
@@ -252,20 +268,25 @@ export default function MintNft() {
                   <button
                     type="submit"
                     disabled={true}
-                    className="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-polyO5 py-3 px-8 text-base font-medium text-white hover:bg-polyO6 focus:outline-none focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+                    className="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-poly5 py-3 px-8 text-base font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                   >
                     Minting soon Images Placeholders
                   </button>
 
                   <button
                     type="button"
-                    className="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-polyO7 hover:bg-polyO5 hover:text-poly7"
+                    className="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-polyO7 hover:bg-poly5 hover:text-poly7"
                   >
                     {/* <HeartIcon
                     className="h-6 w-6 flex-shrink-0"
                     aria-hidden="true"
                   /> */}
-                    <Image height={40} weidth={40} src={primaryToken} />
+                    <Image
+                      height={40}
+                      weidth={40}
+                      alt="Matic Token"
+                      src={primaryToken}
+                    />
                     <span className="sr-only">Add to favorites</span>
                   </button>
                 </div>

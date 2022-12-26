@@ -27,7 +27,7 @@ module.exports = {
         polyR1: '#FEF8F8',
         polyR2: '#FBE1E1',
         polyR3: '#F7BCBC',
-        polyR4: '#F18888'
+        polyR4: '#F18888',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],

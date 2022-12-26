@@ -2,13 +2,33 @@ import '../styles/globals.css'
 import { Inter } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 import Layout from '../components/Layout'
+import {
+  wagmiClient,
+  chains,
+  WagmiConfig,
+  RainbowKitProvider,
+  lightTheme,
+} from '../utils/walletSetup'
 
 export default function App({ Component, pageProps }) {
   return (
-    // <main className={`${inter.variable} font-sans`}>
-    <Layout>
-      <Component {...pageProps} />
-      {/* </main> */}
-    </Layout>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider
+        chains={chains}
+        coolMode={true}
+        theme={lightTheme({
+          accentColor: '#7B3FE4',
+          accentColorForeground: 'white',
+          borderRadius: 'small',
+          fontStack: 'system',
+          overlayBlur: 'small',
+        })}
+      >
+        <Layout>
+          <Component {...pageProps} />
+          {/* </main> */}
+        </Layout>
+      </RainbowKitProvider>
+    </WagmiConfig>
   )
 }
