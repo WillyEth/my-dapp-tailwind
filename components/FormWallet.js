@@ -65,7 +65,7 @@ export default function FormWallet({ handleSubmit, title, description }) {
                     minLength="42"
                     maxLength="42"
                     required={true}
-                    className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-polyO5 focus:outline-none focus:ring-polyO6 sm:text-sm"
                     placeholder="wallet address"
                   />
                 </div>

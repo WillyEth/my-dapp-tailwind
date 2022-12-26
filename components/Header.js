@@ -8,7 +8,7 @@ import HackerLogo from '../public/hacker.png'
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
-  { name: 'Discover', href: '/Team', current: false },
+  { name: 'Discover', href: '/discover', current: false },
   { name: 'Mint Nft', href: '/mintPage', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },

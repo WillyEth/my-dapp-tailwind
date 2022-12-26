@@ -23,7 +23,7 @@ export default function Banner() {
           <div className="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-3 sm:w-auto">
             <a
               href="#"
-              className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50"
+              className="flex items-center justify-center rounded-md border border-transparent bg-polyO5 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-polyO6"
             >
               Learn More
             </a>

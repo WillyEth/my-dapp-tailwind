@@ -73,10 +73,10 @@ export default function Featured() {
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-12 xl:gap-x-16">
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Do your own research.
+              Do your own research
             </h2>
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              No one else will!
+              No one else will
             </h2>
           </div>
           <dl className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-2 lg:mt-0">

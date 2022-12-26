@@ -24,6 +24,10 @@ module.exports = {
         polyO6: '#9E5E25',
         polyO7: '#7A491D',
         polyO8: '#593515',
+        polyR1: '#FEF8F8',
+        polyR2: '#FBE1E1',
+        polyR3: '#F7BCBC',
+        polyR4: '#F18888'
       },
       fontFamily: {
         sans: ['var(--font-inter)'],

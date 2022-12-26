@@ -2,11 +2,11 @@ import { ExclamationTriangleIcon } from '@heroicons/react/20/solid'
 
 export default function AlertScan() {
   return (
-    <div className="rounded-md bg-yellow-50 p-4">
+    <div className="rounded-md bg-polyR2 p-4">
       <div className="flex">
         <div className="flex-shrink-0">
           <ExclamationTriangleIcon
-            className="h-5 w-5 text-yellow-400"
+            className="h-5 w-5 text-polyR4"
             aria-hidden="true"
           />
         </div>
@@ -16,7 +16,7 @@ export default function AlertScan() {
           </h3>
           <div className="mt-2 text-sm text-yellow-700">
             <p>
-              Unable to scan the address or no NFTs found. Please try again.
+              Unable to scan the address, no NFTs or no tokens found. Please try again.
             </p>
           </div>
         </div>

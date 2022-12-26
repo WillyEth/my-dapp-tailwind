@@ -4,8 +4,8 @@ const Spinner = () => {
   return (
     <>
       <div className="mt-10 flex items-center justify-center space-x-2">
-        <div className="h-32 w-32 animate-spin rounded-full border-b-2 border-blue-900"></div>
-        <p className="font-bold text-blue-900">Loading..</p>
+        <div className="h-16 w-16 animate-spin rounded-full border-b-2 border-polyO5"></div>
+        <p className="font-bold text-polyO8">Loading..</p>
       </div>
     </>
   )
