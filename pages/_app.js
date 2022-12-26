@@ -1,6 +1,7 @@
 import '../styles/globals.css'
-import { Inter } from '@next/font/google'
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+// import { Inter } from '@next/font/google'
+// const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+import { Analytics } from '@vercel/analytics/react'
 import Layout from '../components/Layout'
 import {
   wagmiClient,
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       >
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
           {/* </main> */}
         </Layout>
       </RainbowKitProvider>
