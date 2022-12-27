@@ -4,7 +4,6 @@ import { polygonMumbai } from 'wagmi/chains'
 import {
   getDefaultWallets,
   RainbowKitProvider,
-  darkTheme,
   lightTheme,
 } from '@rainbow-me/rainbowkit'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
@@ -17,10 +16,12 @@ export const { chains, provider } = configureChains(
   [
     alchemyProvider({
       apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
+      priority: 0,
     }),
-    publicProvider(),
+//
   ]
 )
+
 
 const { connectors } = getDefaultWallets({
   appName: 'Research NFT Mint',
@@ -28,7 +29,7 @@ const { connectors } = getDefaultWallets({
 })
 
 export const wagmiClient = createClient({
-  autoConnect: true,
+  autoConnect: false,
   connectors,
   provider,
 })
