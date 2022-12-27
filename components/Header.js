@@ -2,10 +2,10 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
+import Guru from '../public/guru.png'
 import Link from 'next/link'
 import Image from 'next/image'
-import HackerLogo from '../public/hacker.png'
-import Guru from '../public/guru.png'
+ 
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
@@ -47,11 +47,11 @@ export default function Header() {
                   /> */}
                   <Image
                     src={Guru}
-                    alt="Crypto Research Hub"
-                    width={40}
-                    height={42}
+                    alt="Crypto Research Guru"
+                    width={46}
+                    height={46}
                     priority
-                    className="block h-8 w-8 lg:hidden"
+                    className="block lg:hidden"
                   />
                   {/* <img
                     className="hidden h-8 w-auto lg:block"
@@ -61,9 +61,9 @@ export default function Header() {
                   /> */}
                   <Image
                     src={Guru}
-                    alt="Crypto Research Hub"
-                    width={40}
-                    height={42}
+                    alt="Crypto Research Guru"
+                    width={46}
+                    height={46}
                     priority
                     className="hidden lg:block"
                   />

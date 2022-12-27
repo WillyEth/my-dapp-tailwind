@@ -13,10 +13,10 @@
   }
   ```
 */
-import { useState } from 'react'
-import { Disclosure, RadioGroup, Tab } from '@headlessui/react'
+
+import { Disclosure, Tab } from '@headlessui/react'
 import { StarIcon } from '@heroicons/react/20/solid'
-import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import poweredByWhite from '../public/poweredbyWhite.svg'
 import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
@@ -124,9 +124,12 @@ export default function MintNft() {
                         <>
                           <span className="sr-only"> {image.name} </span>
                           <span className="absolute inset-0 overflow-hidden rounded-md">
-                            <img
+                            <Image
                               src={image.src}
-                              alt=""
+                              width={160}
+                              height={160}
+                              alt="Nft Image"
+                              priority
                               className="h-full w-full object-cover object-center"
                             />
                           </span>

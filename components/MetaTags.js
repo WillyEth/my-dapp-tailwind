@@ -3,7 +3,7 @@ import Head from 'next/head'
 export default function MetaTags({
   title = 'Crypto Research Guru',
   description = 'Doing your own research in crypto refers to the practice of taking the time to learn and understand cryptocurrencies and the market for them. This often includes reading up on the latest news and developments in the space, analyzing market trends and data, and forming your own opinions and investment strategies based on the information you have gathered. By taking the time to do your own research, you can make informed decisions about your investments in cryptocurrencies and potentially increase your chances of success in the market.',
-  image = '../public/twitter.png',
+  image = 'https://my-dapp-tailwind.vercel.app/guru.png',
   URL = 'https://my-dapp-tailwind.vercel.app/',
 }) {
   return (

@@ -1,4 +1,5 @@
 //import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
+//import Image from 'next/image'
 
 export default function NftImages({ nftList }) {
   console.log('nftList', nftList)
@@ -13,7 +14,8 @@ export default function NftImages({ nftList }) {
           className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
         >
           <div className="flex flex-1 flex-col p-8">
-            <img
+            <Image
+              width={160}
               className="mx-auto h-40 w-40 flex-shrink-0"
               src={nft.image}
               alt="NFT Image"
