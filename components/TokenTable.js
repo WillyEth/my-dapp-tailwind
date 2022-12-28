@@ -66,7 +66,7 @@ export default function TokenTable({ tokenObject }) {
                           <div className="h-10 w-10 flex-shrink-0">
                             <img
                               className="h-10 w-10 rounded-full"
-                              src={token.logo ? token.logo : '/hacker.png'}
+                              src={token.logo ? token.logo : '/guru.png'}
                               alt="Token Logo"
                             />
                           </div>

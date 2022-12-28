@@ -13,7 +13,7 @@
   }
   ```
 */
-
+import * as React from 'react'
 import { Disclosure, Tab } from '@headlessui/react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
@@ -21,59 +21,51 @@ import poweredByWhite from '../public/poweredbyWhite.svg'
 import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import {
+  useAccount,
+  useContractRead,
+  useContractWrite,
+  usePrepareContractWrite,
+  useWaitForTransaction,
+} from 'wagmi'
 
 const product = {
   name: 'By Minting this NFT',
-  price: '.02 MATIC',
+  price: '.02 MATIC ',
   rating: 5,
   images: [
     {
       id: 1,
       name: 'Front View',
-      // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/primaryToken.svg',
+
+      src: '/guru.png',
       alt: 'Nft Image',
     },
     {
       id: 2,
       name: 'Angled view',
-      // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/guru.png',
+
+      src: '/primaryToken.svg',
       alt: 'Nft Image',
     },
     {
       id: 3,
       name: 'Angled view',
-      // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/bnb-bnb-logo.svg',
+      src: '/guru2.png',
       alt: 'Nft Image',
     },
     {
       id: 4,
       name: 'Angled view',
-      // src: 'https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg',
-      src: '/Bitcoin.svg',
+
+      src: '/guru3.png',
       alt: 'Nft Image',
     },
-
-    // More images...
   ],
-  // colors: [
-  //   {
-  //     name: 'Washed Black',
-  //     bgColor: 'bg-gray-700',
-  //     selectedColor: 'ring-gray-700',
-  //   },
-  //   { name: 'White', bgColor: 'bg-white', selectedColor: 'ring-gray-400' },
-  //   {
-  //     name: 'Washed Gray',
-  //     bgColor: 'bg-gray-500',
-  //     selectedColor: 'ring-gray-500',
-  //   },
-  // ],
+
   description: `
-    <p>As a member of the Crypto Research Hub community</p>
-    <p>The pledge is a commitment made by a member of the Crypto Research Hub community to prioritize the security of their cryptocurrency assets. The pledge includes taking all necessary precautions to protect their seed phrase and private keys, educating themselves on the latest threats and scams, and being vigilant in protecting their assets. The member also commits to never sharing their seed phrase or private keys with anyone, recognizing that the safety of their cryptocurrency assets depends on the security of these keys.</p>
+    <p>As a member of the Crypto Research Guru community</p>
+    <p>The pledge is a commitment made by a member of the Crypto Research Guru community to prioritize the security of their cryptocurrency assets. The pledge includes taking all necessary precautions to protect their seed phrase and private keys, educating themselves on the latest threats and scams, and being vigilant in protecting their assets. The member also commits to never sharing their seed phrase or private keys with anyone, recognizing that the safety of their cryptocurrency assets depends on the security of these keys.</p>
   `,
   details: [
     {
@@ -104,6 +96,10 @@ function classNames(...classes) {
 
 export default function MintNft() {
   // const [selectedColor, setSelectedColor] = useState(product.colors[0])
+  const [mounted, setMounted] = React.useState(false)
+  const [totalMinted, setTotalMinted] = React.useState(0)
+  const { isConnected } = useAccount()
+  React.useEffect(() => setMounted(true), [])
 
   return (
     <div className=" relative mx-auto max-w-7xl py-1 px-6 sm:py-1 lg:px-10 lg:py-1">
@@ -191,26 +187,20 @@ export default function MintNft() {
                 </div>
               </div>
 
-              {/* Reviews */}
               <div className="mt-3">
-                <h3 className="sr-only">Reviews</h3>
+                <h3 className="sr-only">Total Minuted</h3>
                 <div className="flex items-center">
                   <div className="flex items-center">
-                    {[0, 1, 2, 3, 4].map((rating) => (
-                      <StarIcon
-                        key={rating}
-                        className={classNames(
-                          product.rating > rating
-                            ? 'text-polyO4'
-                            : 'text-gray-300',
-                          'h-5 w-5 flex-shrink-0'
-                        )}
-                        aria-hidden="true"
-                      />
-                    ))}
+                    <p className="aria-hidden=`Total Minted`  font-bold text-poly5">
+                      Total Minted {totalMinted} / 1999
+                    </p>
                   </div>
-                  <p className="sr-only">{product.rating} out of 5 stars</p>
                 </div>
+                <p className="mt-1 font-bold">
+                  ***MINTING IS TESTING ON POLYGON MUMBAI-TEST NETWORK TO HELP
+                  TEST CONNECT WALLET AND GET FREE TEST MATIC FAUCET
+                  https://mumbaifaucet.com/ MINT at your own risk***
+                </p>
               </div>
 
               <div className="mt-6">
@@ -223,75 +213,31 @@ export default function MintNft() {
               </div>
 
               <form className="mt-6">
-                {/* Colors */}
-                {/* <div>
-                <h3 className="text-sm text-gray-600">Color</h3>
-
-                <RadioGroup
-                  value={selectedColor}
-                  onChange={setSelectedColor}
-                  className="mt-2"
-                >
-                  <RadioGroup.Label className="sr-only">
-                    {' '}
-                    Choose a color{' '}
-                  </RadioGroup.Label>
-                  <span className="flex items-center space-x-3">
-                    {product.colors.map((color) => (
-                      <RadioGroup.Option
-                        key={color.name}
-                        value={color}
-                        className={({ active, checked }) =>
-                          classNames(
-                            color.selectedColor,
-                            active && checked ? 'ring ring-offset-1' : '',
-                            !active && checked ? 'ring-2' : '',
-                            'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none'
-                          )
-                        }
-                      >
-                        <RadioGroup.Label as="span" className="sr-only">
-                          {' '}
-                          {color.name}{' '}
-                        </RadioGroup.Label>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            color.bgColor,
-                            'h-8 w-8 rounded-full border border-black border-opacity-10'
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </span>
-                </RadioGroup>
-              </div> */}
-
                 <div className="sm:flex-col1 mt-10 flex">
-                  <button
-                    type="submit"
-                    disabled={true}
-                    className="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-poly5 py-3 px-8 text-base font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
-                  >
-                    Minting soon Images Placeholders
-                  </button>
+                  {mounted && isConnected && (
+                    <button
+                      type="submit"
+                      disabled={true}
+                      className="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-poly5 py-3 px-8 text-base font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
+                    >
+                      Minting soon Images Placeholders
+                    </button>
+                  )}
 
-                  <button
-                    type="button"
-                    className="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-polyO7 hover:bg-poly5 hover:text-poly7"
-                  >
-                    {/* <HeartIcon
-                    className="h-6 w-6 flex-shrink-0"
-                    aria-hidden="true"
-                  /> */}
-                    <Image
-                      height={40}
-                      weidth={40}
-                      alt="Matic Token"
-                      src={primaryToken}
-                    />
-                    <span className="sr-only">Add to favorites</span>
-                  </button>
+                  {mounted && isConnected && (
+                    <button
+                      type="button"
+                      className="ml-4 flex items-center justify-center rounded-md py-3 px-3 text-polyO7 hover:bg-poly5 hover:text-poly7"
+                    >
+                      <Image
+                        height={40}
+                        weidth={40}
+                        alt="Matic Token"
+                        src={primaryToken}
+                      />
+                      <span className="sr-only">Add to favorites</span>
+                    </button>
+                  )}
                 </div>
               </form>
 
