@@ -18,6 +18,7 @@ import Guru from '../public/guru.png'
 const notificationMethods = [
   { id: 'ETH', title: 'Ethereum' },
   { id: 'MATIC', title: 'Polygon' },
+  { id: 'MUMBAI', title: 'Mumbai' },
 ]
 
 export default function FormWallet({ handleSubmit, title, description }) {

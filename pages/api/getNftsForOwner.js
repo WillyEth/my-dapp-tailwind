@@ -1,16 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import alchemyETH from '../../utils/alchemyETH'
-import alchemyMATIC from '../../utils/alchemyMATIC'
+// import alchemyETH from '../../utils/alchemyETH'
+// import alchemyMATIC from '../../utils/alchemyMATIC'
+// import alchemyMUMBAI from '../../utils/alchemyMUMBAI'
+import { alchemyETH, alchemyMATIC, alchemyMUMBAI } from '../../utils/alchemyAPI'
 
 export default async function handler(req, res) {
   const { method } = req
   let alchemy = alchemyETH
-
   const chain = req.body.chain
 
   if (chain === 'MATIC') {
     alchemy = alchemyMATIC
+  }
+
+  if (chain === 'MUMBAI') {
+    alchemy = alchemyMUMBAI
   }
 
   if (method == 'POST') {

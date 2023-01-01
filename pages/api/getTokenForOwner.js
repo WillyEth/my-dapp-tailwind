@@ -1,5 +1,7 @@
-import alchemyETH from '../../utils/alchemyETH'
-import alchemyMATIC from '../../utils/alchemyMATIC'
+// import alchemyETH from '../../utils/alchemyETH'
+// import alchemyMATIC from '../../utils/alchemyMATIC'
+// import alchemyMUMBAI from '../../utils/alchemyMUMBAI'
+import { alchemyETH, alchemyMATIC, alchemyMUMBAI } from '../../utils/alchemyAPI'
 
 export default async function handler(req, res) {
   const { method } = req
@@ -12,6 +14,10 @@ export default async function handler(req, res) {
     alchemy = alchemyMATIC
   }
 
+  if (chain === 'MUMBAI') {
+    alchemy = alchemyMUMBAI
+  }
+
   if (method == 'POST') {
     const { address } = req.body
 
@@ -19,6 +25,7 @@ export default async function handler(req, res) {
     if (address) {
       const balances = await alchemy.core.getTokenBalances(address)
       // Get token balances
+      console.log("balances", balances)
 
       // Remove tokens with zero balance
       const nonZeroBalances = balances.tokenBalances.filter((token) => {

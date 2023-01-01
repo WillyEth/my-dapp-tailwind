@@ -6,7 +6,7 @@ import {
   RainbowKitProvider,
   lightTheme,
 } from '@rainbow-me/rainbowkit'
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
+import { chain, configureChains, createClient, WagmiConfig,  } from 'wagmi'
 
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
