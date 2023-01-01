@@ -8,7 +8,6 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { guruAbi } from '../utils/guruABI'
 import { guruAddr } from '../constants'
 import clsx from 'clsx'
-import Confetti from 'react-confetti'
 
 import { ethers } from 'ethers'
 
@@ -84,10 +83,13 @@ const payment = ethers.utils.parseEther('.01')
 export default function MintNft() {
   const [mounted, setMounted] = React.useState(false)
   const [totalMinted, setTotalMinted] = React.useState(0)
+
   const [mintingState, setMintingState] = React.useState({ approval: false, minting: false, minted: false })
 
   const { isConnected } = useAccount()
-  React.useEffect(() => setMounted(true), [])
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   //PREPARE
   const { config: contractWriteConfig } = usePrepareContractWrite({
@@ -120,7 +122,7 @@ export default function MintNft() {
       setMintingState({ approval: false, minting: true, minted: false })
     },
   })
-
+ 
   //WAIT FOR TX
   const {
     data: txData,
@@ -279,7 +281,7 @@ export default function MintNft() {
                       focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full`,
                       mintingState.approval && 'animate-pulse text-polyO5 ',
                       mintingState.minting && 'animate-pulse  text-polyO5',
-                      mintingState.minted && 'text-polyO5',
+                      mintingState.minted && 'bg-polyG5 text-polyO5',
                       !mintingState.approval && !mintingState.minting && !mintingState.minted && 'text-white'
                     )}
                   >
@@ -287,7 +289,6 @@ export default function MintNft() {
                     {mintingState.minting && 'Minting...'}
                     {!mintingState.approval && !mintingState.minting && !mintingState.minted && 'Mint'}
                     {mintingState.minted && 'Minted!'}
-                    {mintingState.minted && <Confetti />}
                   </button>
                 )}
               </div>

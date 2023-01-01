@@ -28,6 +28,7 @@ module.exports = {
         polyR2: '#FBE1E1',
         polyR3: '#F7BCBC',
         polyR4: '#F18888',
+        polyG5: '#3CBEAE',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
