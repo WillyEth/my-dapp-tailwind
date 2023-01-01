@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Mint Nft', href: '/mintPage', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
+  { name: 'Project Voting', href: 'https://www.tally.xyz/gov/eip155:80001:0xaBB88Ac8DCaef4b4dF8d8D12f094C23913d13297', current: false },
 ]
 
 function classNames(...classes) {

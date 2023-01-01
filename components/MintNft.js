@@ -122,7 +122,7 @@ export default function MintNft() {
       setMintingState({ approval: false, minting: true, minted: false })
     },
   })
- 
+
   //WAIT FOR TX
   const {
     data: txData,
@@ -234,7 +234,7 @@ export default function MintNft() {
               <div>
                 <h1 className="mt-2 flex flex-col  text-2xl font-bold tracking-tight text-gray-900  lg:flex-row">
                   {product.name}{' '}
-                  <span className="items-center text-2xl text-poly7 lg:px-6   ">Total Minted {totalMinted} / 1999</span>
+                  <span className="items-center text-2xl text-poly7 lg:px-6   ">Minted {totalMinted} / 1999</span>
                 </h1>
               </div>
 
