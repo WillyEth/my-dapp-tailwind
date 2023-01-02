@@ -6,72 +6,14 @@ import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { guruAbi } from '../utils/guruABI'
-import { guruAddr } from '../constants'
+import { guruAddr, product } from '../constants'
 import clsx from 'clsx'
-
 import { ethers } from 'ethers'
-
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 
 const contractConfig = {
   address: guruAddr,
   abi: guruAbi,
-}
-
-const product = {
-  name: 'Guru Mint',
-  price: '.01 MATIC ',
-  rating: 5,
-  images: [
-    {
-      id: 1,
-      name: 'Front View',
-
-      src: '/guru.png',
-      alt: 'Nft Image',
-    },
-    {
-      id: 2,
-      name: 'Angled view',
-
-      src: '/primaryToken.svg',
-      alt: 'Nft Image',
-    },
-    {
-      id: 3,
-      name: 'Angled view',
-      src: '/guru2.png',
-      alt: 'Nft Image',
-    },
-    {
-      id: 4,
-      name: 'Angled view',
-
-      src: '/guru3.png',
-      alt: 'Nft Image',
-    },
-  ],
-
-  description: `
- <p> A member of the Crypto Research Guru community pledges to prioritize the security of their cryptocurrency assets by taking necessary precautions to protect their seed phrase and private keys, educating themselves on current threats and scams, and being vigilant in protecting their assets. They also commit to never sharing their seed phrase or private keys with anyone,
- recognizing the importance of these keys for asset security. In addition, minting a non-fungible token (NFT) 
- gives the investor one vote in governance and provides utility from the start. </p>`,
-  details: [
-    {
-      name: 'Features',
-      items: [
-        'Use as a Avatar show the Crypto community your Pledge of Safety',
-        'Low Mint fee Please Help fund the Crypto Research Hub',
-        '1 NFT equals 1 Vote on Governance Voting',
-        'Low Gas Fee on PolyGon Network',
-      ],
-    },
-    {
-      name: 'PolyGon Network',
-      items: ['Broader Reach', 'Speed and Cheapness', 'Lower Gas Fee Compared to Ethereum'],
-    },
-    // More sections...
-  ],
 }
 
 function classNames(...classes) {
@@ -134,6 +76,9 @@ export default function MintNft() {
     hash: mintData?.hash,
     onSuccess(data) {
       setMintingState({ approval: false, minting: false, minted: true })
+    },
+    onError(error) {
+      setMintingState({ approval: false, minting: false, minted: false })
     },
   })
 
@@ -271,10 +216,8 @@ export default function MintNft() {
                 {mounted && isConnected && (
                   <button
                     disabled={!mint || mintingState.approval || mintingState.minting || mintingState.minted}
-                    // onClick={() => mint?.()}
                     onClick={handleClick}
                     type="submit"
-                    // className="flex max-w-xs flex-1 animate-bounce items-center justify-center rounded-md border border-transparent bg-poly5 py-3 px-8 text-base font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full"
                     className={clsx(
                       `border-transparen flex max-w-xs  flex-1 animate-bounce  items-center  justify-center rounded-md
                       border bg-poly5 py-3 px-8 text-base font-medium hover:bg-poly6 focus:outline-none

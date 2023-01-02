@@ -1,6 +1,5 @@
 import {
   BoltIcon,
-  EnvelopeIcon,
   GlobeAltIcon,
   RocketLaunchIcon,
   TrophyIcon,

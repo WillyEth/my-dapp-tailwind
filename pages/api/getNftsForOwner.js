@@ -22,9 +22,7 @@ export default async function handler(req, res) {
     const { address } = req.body
     console.log('addressPost', address)
     if (address) {
-      const nfts = await alchemy.nft
-        .getNftsForOwner(address)
-        .then((data) => data.ownedNfts)
+      const nfts = await alchemy.nft.getNftsForOwner(address).then((data) => data.ownedNfts)
       res.status(200).json(nfts)
     } else {
       res.status(500).json({ error: 'Missing contract address' })

@@ -11,8 +11,8 @@ export default function WalletScanToken() {
   const [isLoading, setIsLoading] = React.useState(false)
 
   const handleSubmit = (event) => {
-    console.log(event.target.wallet.value)
-    console.log(event.target.notification.value)
+    // console.log(event.target.wallet.value)
+    // console.log(event.target.notification.value)
     event.preventDefault()
     setTokenObject(null)
     getTokenForOwner(event.target.wallet.value, event.target.notification.value)
@@ -37,8 +37,6 @@ export default function WalletScanToken() {
       if (token.length === 0) {
         setIsError(true)
       }
-
-
     } catch (error) {
       setIsError(true)
     }
@@ -49,9 +47,7 @@ export default function WalletScanToken() {
     <>
       {/* <div className="container mx-auto sm:px-6 lg:px-8"> */}
       <div className=" relative mx-auto max-w-7xl py-1 px-6 sm:py-1 lg:px-8 lg:py-1">
-        <FormWallet handleSubmit={handleSubmit}
-                    title="Token Wallet Scan"
-                    description="" />
+        <FormWallet handleSubmit={handleSubmit} title="Token Wallet Scan" description="" />
         {isError ? <AlertScan /> : null}
         {tokenObject ? <TokenTable tokenObject={tokenObject} /> : null}
         {isLoading ? <Spinner /> : null}

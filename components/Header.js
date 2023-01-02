@@ -1,11 +1,9 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, Transition } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 import Guru from '../public/guru.png'
 import Link from 'next/link'
 import Image from 'next/image'
- 
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
@@ -13,7 +11,11 @@ const navigation = [
   { name: 'Mint Nft', href: '/mintPage', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
-  { name: 'Project Voting', href: 'https://www.tally.xyz/gov/eip155:80001:0xaBB88Ac8DCaef4b4dF8d8D12f094C23913d13297', current: false },
+  {
+    name: 'Project Voting',
+    href: 'https://www.tally.xyz/gov/eip155:80001:0xaBB88Ac8DCaef4b4dF8d8D12f094C23913d13297',
+    current: false,
+  },
 ]
 
 function classNames(...classes) {
