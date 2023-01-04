@@ -6,9 +6,7 @@ export default function TokenTable({ tokenObject }) {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">Scan</h1>
-          <p className="mt-2 text-sm text-gray-700">
-            Do not buy/sell/transfer unknown tokens
-          </p>
+          <p className="mt-2 text-sm text-gray-700">Do not buy/sell/transfer unknown tokens</p>
         </div>
         {/* <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
           <button
@@ -26,22 +24,13 @@ export default function TokenTable({ tokenObject }) {
               <table className="min-w-full divide-y divide-gray-300">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th
-                      scope="col"
-                      className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-                    >
+                    <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">
                       Asset
                     </th>
-                    <th
-                      scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
+                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Balance
                     </th>
-                    <th
-                      scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                    >
+                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                       Token Address
                     </th>
                     {/* <th
@@ -66,23 +55,27 @@ export default function TokenTable({ tokenObject }) {
                           <div className="h-10 w-10 flex-shrink-0">
                             <img
                               className="h-10 w-10 rounded-full"
-                              src={token.logo ? token.logo : '/guru.png'}
+                              src={
+                                token.logo
+                                  ? token.logo
+                                  : token.symbol === 'ETH'
+                                  ? '/ethereum.png'
+                                  : token.symbol === 'MATIC'
+                                  ? '/primaryToken.svg'
+                                  : '/guru.png'
+                              }
                               alt="Token Logo"
                             />
                           </div>
                           <div className="ml-4">
-                            <div className="font-medium text-gray-900">
-                              {token.name}
-                            </div>
+                            <div className="font-medium text-gray-900">{token.name}</div>
                             <div className="text-gray-500">{token.symbol}</div>
                           </div>
                         </div>
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         <div className="text-gray-900">{token.balance}</div>
-                        <div className="text-gray-500">
-                          Network {token.chain}
-                        </div>
+                        <div className="text-gray-500">Network {token.chain}</div>
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">

@@ -197,10 +197,12 @@ export default function MintNft() {
 
               <div className="mt-3">
                 <h3 className="sr-only">Total Minuted</h3>
-                <p className="mt-1 font-bold">
-                  ***MINTING IS TESTING ON POLYGON MUMBAI-TEST NETWORK TO HELP TEST CONNECT WALLET AND GET FREE TEST
-                  MATIC FAUCET https://mumbaifaucet.com/ MINT at your own risk***
-                </p>
+                <p className="max-w-prose mt-1 text-center font-bold">*To help Test on POLYGON MUMBAI-TEST*</p>
+                <ul className="max-w-prose mt-3 list-inside list-disc text-sm font-bold text-gray-500">
+                  <li>Suggestion do not use main wallet</li>
+                  <li>Add Mumbai at mure sure to include testnet  https://chainlist.org/</li>
+                  <li>Get free Matic    https://mumbaifaucet.com/</li>
+                </ul>
               </div>
 
               <div className="mt-6">

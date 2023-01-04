@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 const navigation = [
   { name: 'PayLoad', href: '/', current: true },
-  { name: 'Discover', href: '/discover', current: false },
   { name: 'Mint Nft', href: '/mintPage', current: false },
   { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
   { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
@@ -16,6 +15,7 @@ const navigation = [
     href: 'https://www.tally.xyz/gov/eip155:80001:0xaBB88Ac8DCaef4b4dF8d8D12f094C23913d13297',
     current: false,
   },
+  { name: 'Discover', href: '/discover', current: false },
 ]
 
 function classNames(...classes) {
