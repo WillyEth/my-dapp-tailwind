@@ -2,14 +2,13 @@ import Head from 'next/head'
 
 export default function MetaTags({
   title = 'NFTs, Simplified: Butterfly Labs',
-  description = 'NFTs, Simplified: Butterfly Labs is dedicated to helping individuals and organizations navigate the world of non-fungible tokens (NFTs). Our mission is to provide expert consultation and education on all things NFT, simplifying the process of understanding and utilizing this innovative technology. We aim to empower our clients to make informed decisions about NFT adoption and use, and to help them effectively leverage NFTs to achieve their goals. Whether you are a seasoned veteran of the crypto space or new to the world of NFTs, we are here to guide you every step of the way.',
+  description = 'NFTs, Simplified: Butterfly Labs is committed to providing expert guidance and education on non-fungible tokens (NFTs). Our goal is to help clients understand and effectively utilize NFTs to achieve their goals, through informed decision making and expert consultation. We serve a diverse range of clients, from experienced crypto enthusiasts to those new to the world of NFTs',
   URL = 'https://gateway.ipfs.io/ipfs/QmQFMRmr31BwvKepJcyV63QLNGwHtRY17hkbnkZ2Nzkkfa',
 }) {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content="@btwit71" />
+
       {/* {<!-- Primary Meta Tags --> */}
       <title>NFTs Butterfly Labs</title>
       <meta name="title" content={title} />
@@ -20,14 +19,16 @@ export default function MetaTags({
       <meta property="og:url" content={URL} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="https://my-dapp-tailwind.vercel.app/" />
+      <meta property="og:image" content={URL} />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@btwit71" />
+      <meta name="twitter:site" content="@btwit71"></meta>
       <meta property="twitter:url" content={URL} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content="https://my-dapp-tailwind.vercel.app/"></meta>
+      <meta property="twitter:image" content={URL}></meta>
 
       <meta
         name="keywords"
