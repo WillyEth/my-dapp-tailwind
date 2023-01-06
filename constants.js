@@ -43,19 +43,18 @@ export const product = {
   ],
 
   description: `
- <p> A member of the Crypto Research Guru community pledges to prioritize the security of their cryptocurrency assets by taking necessary precautions to protect their seed phrase and private keys, educating themselves on current threats and scams, and being vigilant in protecting their assets. They also commit to never sharing their seed phrase or private keys with anyone,
- recognizing the importance of these keys for asset security. In addition, minting a non-fungible token (NFT) 
- gives the investor one vote in governance and provides utility from the start. </p>`,
+ <p>Congratulations on owning a NFT with a vote in a DAO! This means that you have a say in the decision-making process of the decentralized organization that the DAO represents. As a holder of a voting NFT, you have the power to contribute to the direction and governance
+  of the DAO by casting your vote on important matters. Remember to stay informed and exercise your right to vote wisely. </p>`,
   details: [
-    {
-      name: 'Features',
-      items: [
-        'Use as a Avatar show the Crypto community your Pledge of Safety',
-        'Low Mint fee Please Help fund the Crypto Research Hub',
-        '1 NFT equals 1 Vote on Governance Voting',
-        'Low Gas Fee on PolyGon Network',
-      ],
-    },
+    // {
+    //   // name: 'Features',
+    //   // items: [
+    //   //   'Use as a Avatar show the Crypto community your Pledge of Safety',
+    //   //   'Low Mint fee Please Help fund the Crypto Research Hub',
+    //   //   '1 NFT equals 1 Vote on Governance Voting',
+    //   //   'Low Gas Fee on PolyGon Network',
+    //   // ],
+    // },
     {
       name: 'PolyGon Network',
       items: ['Broader Reach', 'Speed and Cheapness', 'Lower Gas Fee Compared to Ethereum'],

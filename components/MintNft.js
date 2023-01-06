@@ -55,12 +55,13 @@ export default function MintNft() {
 
     onError(mintError) {
       setMintingState({ approval: false, minting: false, minted: false })
+      alert("Minting failed. Please try again.")
     },
     onSettled(data, error) {
-      console.log('Settled', { data, error })
+ 
     },
     onSuccess(data) {
-      console.log('WRITE Success', data)
+   
       setMintingState({ approval: false, minting: true, minted: false })
     },
   })
@@ -79,6 +80,7 @@ export default function MintNft() {
     },
     onError(error) {
       setMintingState({ approval: false, minting: false, minted: false })
+      alert('Minting failed. Please try again.')
     },
   })
 
@@ -197,12 +199,12 @@ export default function MintNft() {
 
               <div className="mt-3">
                 <h3 className="sr-only">Total Minuted</h3>
-                <p className="max-w-prose mt-1 text-center font-bold">*To help Test on POLYGON MUMBAI-TEST*</p>
-                <ul className="max-w-prose mt-3 list-inside list-disc text-sm font-bold text-gray-500">
+                <p className="max-w-prose mt-1 text-center font-bold">*Currently Testing on POLYGON MUMBAI-TEST*</p>
+                {/* <ul className="max-w-prose mt-3 list-inside list-disc text-sm font-bold text-gray-500">
                   <li>Suggestion do not use main wallet</li>
                   <li>Add Mumbai at mure sure to include testnet  https://chainlist.org/</li>
                   <li>Get free Matic    https://mumbaifaucet.com/</li>
-                </ul>
+                </ul> */}
               </div>
 
               <div className="mt-6">

@@ -6,16 +6,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'PayLoad', href: '/', current: true },
-  { name: 'Mint Nft', href: '/mintPage', current: false },
-  { name: 'NFT Wallet Scan', href: '/walletPageNft', current: false },
-  { name: 'Token Wallet Scan', href: '/walletPageToken', current: false },
+  { name: 'Web3', href: '/', current: true },
+  { name: 'NFT Mint', href: '/mintPage', current: false },
+
+  { name: 'NFT Finder', href: '/walletPageNft', current: false },
+  { name: 'Token Finder', href: '/walletPageToken', current: false },
+
+  { name: 'Discover', href: '/discover', current: false },
   {
-    name: 'Project Voting',
-    href: 'https://www.tally.xyz/gov/eip155:80001:0xaBB88Ac8DCaef4b4dF8d8D12f094C23913d13297',
+    name: 'NFT DAO',
+    href: 'https://www.tally.xyz/gov/guru-research-voting',
     current: false,
   },
-  { name: 'Discover', href: '/discover', current: false },
 ]
 
 function classNames(...classes) {
@@ -25,14 +27,14 @@ function classNames(...classes) {
 export default function Header() {
   const router = useRouter()
   return (
-    <Disclosure as="nav" className="bg-poly8">
+    <Disclosure as="nav" className="bg-poly5">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-poly6 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -79,8 +81,8 @@ export default function Header() {
                         href={item.href}
                         className={classNames(
                           item.href === router.pathname
-                            ? 'bg-poly6 text-white'
-                            : 'text-poly1 hover:bg-poly4 hover:text-white',
+                            ? 'bg-poly7 text-white'
+                            : 'text-poly1 hover:bg-poly6 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         // aria-current={item.href ? 'page' : undefined}
@@ -177,8 +179,8 @@ export default function Header() {
                   href={item.href}
                   className={classNames(
                     item.href === router.pathname
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      ? 'bg-poly7 text-white'
+                      : 'text-gray-300 hover:bg-poly6 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   // aria-current={item.href ? 'page' : undefined}

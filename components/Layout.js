@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <main className={`${inter.variable} font-sans`}>
-        <Banner />
+        {/* <Banner /> */}
         <Header />
         {children}
       </main>
