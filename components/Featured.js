@@ -1,20 +1,26 @@
 import { BoltIcon, GlobeAltIcon, RocketLaunchIcon, TrophyIcon } from '@heroicons/react/24/outline'
 
+import ButterFly from '../public/butterfly.svg'
+import Image from 'next/image'
+
 const features = [
   {
     name: 'Discover',
-    description: 'NFTs have the potential to revolutionize the way we think about and use digital assets.',
+    description:
+      'NFTs have the potential to change the way we use digital assets by verifying ownership, enabling new forms of trade, and allowing for the monetization of digital content. The possibilities for NFTs are vast and varied.',
+
     icon: GlobeAltIcon,
   },
   {
     name: 'NFT Mint',
-    description: 'Show your support for the project by minting NFTs with voting power.',
+    description:
+      'We would love to help you build your project and see it thrive. No project is too small for us to develop. Join us on this journey by getting involved with NFTs and minting our projects DAO NFT. Show your support and be a part of something great.',
     icon: RocketLaunchIcon,
   },
   {
     name: 'Technology',
     description:
-      'NFTs can represent a wide range of assets, such as real estate, artwork, event tickets, gaming assets, and even voting rights in decentralized organization',
+      'NFTs can represent a wide range of assets, such as real estate, artwork, event tickets, gaming assets, and even voting rights in decentralized organization. Own your project',
     icon: BoltIcon,
   },
   {
@@ -69,7 +75,14 @@ export default function Featured() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Cutting-edge tech that unlocks unlimited possibilities
             </h2>
+            <div className="mt-10">
+              <Image className="mx-auto" width={160} height={60} priority src={ButterFly} alt="Crypto Research Hub" />
+            </div>
           </div>
+          {/* <div className="mt-12 >
+            <Image className="mx-auto" width={80} height={40} priority src={ButterFly} alt="Crypto Research Hub" />
+          </div> */}
+
           <dl className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-2 lg:mt-0">
             {features.map((feature) => (
               <div key={feature.name}>

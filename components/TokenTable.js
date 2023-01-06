@@ -62,7 +62,7 @@ export default function TokenTable({ tokenObject }) {
                                   ? '/ethereum.png'
                                   : token.symbol === 'MATIC'
                                   ? '/primaryToken.svg'
-                                  : '/guru.png'
+                                  : '/butterfly.svg'
                               }
                               alt="Token Logo"
                             />

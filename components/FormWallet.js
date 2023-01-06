@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { LockClosedIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import Guru from '../public/guru.png'
+
+import ButterFly from '../public/butterfly.svg'
 
 const notificationMethods = [
   { id: 'ETH', title: 'Ethereum' },
@@ -17,12 +18,12 @@ export default function FormWallet({ handleSubmit, title, description }) {
         <div className="flex min-h-full items-center justify-center py-5 px-6 sm:px-9 lg:px-8">
           <div className="w-full max-w-lg space-y-8">
             <div>
-              <Image className="mx-auto" width={80} height={40} priority src={Guru} alt="Crypto Research Hub" />
+              <Image className="mx-auto" width={80} height={40} priority src={ButterFly} alt="Crypto Research Hub" />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">{title}</h2>
               <p className="mt-2 text-center text-sm text-gray-600">
-                discover whats inside{' '}
+                discover whats inside {''}
                 <a href="#" className="font-medium text-poly7 hover:text-poly6">
-                  become a Guru
+                   at the Butterfly Lab
                 </a>
               </p>
             </div>

@@ -1,7 +1,8 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
-import Guru from '../public/guru.png'
+
+import ButterFly from '../public/butterfly.svg'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -51,8 +52,8 @@ export default function Header() {
                     alt="Your Company"
                   /> */}
                   <Image
-                    src={Guru}
-                    alt="Crypto Research Guru"
+                    src={ButterFly}
+                    alt="ButterFly Labs"
                     width={46}
                     height={46}
                     priority
@@ -65,8 +66,8 @@ export default function Header() {
 
                   /> */}
                   <Image
-                    src={Guru}
-                    alt="Crypto Research Guru"
+                    src={ButterFly}
+                    alt="ButterFly Labs"
                     width={46}
                     height={46}
                     priority

@@ -1,10 +1,9 @@
 import Head from 'next/head'
 
 export default function MetaTags({
-  title = 'Crypto Research Guru',
-  description = 'Doing your own research in crypto refers to the practice of taking the time to learn and understand cryptocurrencies and the market for them. This often includes reading up on the latest news and developments in the space, analyzing market trends and data, and forming your own opinions and investment strategies based on the information you have gathered. By taking the time to do your own research, you can make informed decisions about your investments in cryptocurrencies and potentially increase your chances of success in the market.',
-  image = 'https://my-dapp-tailwind.vercel.app/guru.png',
-  URL = 'https://my-dapp-tailwind.vercel.app/',
+  title = 'NFTs, Simplified: Butterfly Labs',
+  description = 'NFTs, Simplified: Butterfly Labs is dedicated to helping individuals and organizations navigate the world of non-fungible tokens (NFTs). Our mission is to provide expert consultation and education on all things NFT, simplifying the process of understanding and utilizing this innovative technology. We aim to empower our clients to make informed decisions about NFT adoption and use, and to help them effectively leverage NFTs to achieve their goals. Whether you are a seasoned veteran of the crypto space or new to the world of NFTs, we are here to guide you every step of the way.',
+  URL = 'https://gateway.ipfs.io/ipfs/QmQFMRmr31BwvKepJcyV63QLNGwHtRY17hkbnkZ2Nzkkfa',
 }) {
   return (
     <Head>
@@ -12,7 +11,7 @@ export default function MetaTags({
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content="@btwit71" />
       {/* {<!-- Primary Meta Tags --> */}
-      <title>Crypto Research Guru</title>
+      <title>NFTs Butterfly Labs</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 
@@ -21,44 +20,24 @@ export default function MetaTags({
       <meta property="og:url" content={URL} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta
-        property="og:image"
-        content="https://my-dapp-tailwind.vercel.app/"
-      />
+      <meta property="og:image" content="https://my-dapp-tailwind.vercel.app/" />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={URL} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta
-        property="twitter:image"
-        content="https://my-dapp-tailwind.vercel.app/"
-      ></meta>
+      <meta property="twitter:image" content="https://my-dapp-tailwind.vercel.app/"></meta>
 
       <meta
         name="keywords"
-        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT"
+        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT, Butterfly, Consulting, DAO, Matix"
       />
       <meta name="author" content="Willy Eth" />
       <meta name="copyright" content="Copyright Willy Eth 2023" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
