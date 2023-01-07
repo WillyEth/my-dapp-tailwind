@@ -8,12 +8,12 @@ import Image from 'next/image'
 
 const navigation = [
   { name: 'Web3', href: '/', current: true },
+ 
   { name: 'NFT Mint', href: '/mintPage', current: false },
-
+  { name: 'About', href: 'https://about.nftbutterflylab.com/', current: false },
   { name: 'NFT Finder', href: '/walletPageNft', current: false },
   { name: 'Token Finder', href: '/walletPageToken', current: false },
 
-  { name: 'Discover', href: 'https://about.nftbutterflylab.com/', current: false },
   {
     name: 'NFT DAO',
     href: 'https://www.tally.xyz/gov/guru-research-voting',
