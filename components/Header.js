@@ -13,7 +13,7 @@ const navigation = [
   { name: 'NFT Finder', href: '/walletPageNft', current: false },
   { name: 'Token Finder', href: '/walletPageToken', current: false },
 
-  { name: 'Discover', href: '/discover', current: false },
+  { name: 'Discover', href: 'https://about.nftbutterflylab.com/', current: false },
   {
     name: 'NFT DAO',
     href: 'https://www.tally.xyz/gov/guru-research-voting',
