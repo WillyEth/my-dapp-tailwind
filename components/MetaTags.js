@@ -32,7 +32,7 @@ export default function MetaTags({
 
       <meta
         name="keywords"
-        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT, Butterfly, Consulting, DAO, Matic"
+        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT, Butterfly, Consulting, DAO, Matic, ETH"
       />
       <meta name="author" content="Willy Eth" />
       <meta name="copyright" content="Copyright Willy Eth 2023" />
