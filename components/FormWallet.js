@@ -2,7 +2,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import { LockClosedIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 
-import ButterFly from '../public/butterfly.svg'
+import Logo from '../public/logo.png'
 
 const notificationMethods = [
   { id: 'ETH', title: 'Ethereum' },
@@ -18,12 +18,12 @@ export default function FormWallet({ handleSubmit, title, description }) {
         <div className="flex min-h-full items-center justify-center py-5 px-6 sm:px-9 lg:px-8">
           <div className="w-full max-w-lg space-y-8">
             <div>
-              <Image className="mx-auto" width={80} height={40} priority src={ButterFly} alt="Crypto Research Hub" />
+              <Image className="mx-auto" width={80} height={40} priority src={Logo} alt="Butterfly Lab" />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">{title}</h2>
               <p className="mt-2 text-center text-sm text-gray-600">
                 discover whats inside {''}
                 <a href="#" className="font-medium text-poly7 hover:text-poly6">
-                   at the Butterfly Lab
+                  at the Butterfly Lab
                 </a>
               </p>
             </div>
@@ -48,23 +48,23 @@ export default function FormWallet({ handleSubmit, title, description }) {
                 </div>
               </div> */}
 
-              <div class="flex ">
+              <div className="flex ">
                 <label htmlFor="wallet-address" className="sr-only">
                   {title}
                 </label>
-                <div class="relative w-full -space-y-px shadow-sm">
-                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                <div className="relative w-full -space-y-px shadow-sm">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                     <svg
                       aria-hidden="true"
-                      class="h-5 w-5 text-gray-500 dark:text-gray-400"
+                      className="h-5 w-5 text-gray-500 dark:text-gray-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </div>
@@ -75,37 +75,37 @@ export default function FormWallet({ handleSubmit, title, description }) {
                     type="text"
                     minLength="2"
                     maxLength="42"
-                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-12  text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500  dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    className="block w-full rounded-lg border border-poly5 bg-poly2 p-2.5 pl-12  text-sm text-poly5 focus:border-poly5 focus:ring-poly4  dark:border-poly5 dark:bg-poly5 dark:text-white dark:placeholder-poly5 dark:focus:border-poly5 dark:focus:ring-poly5"
                     placeholder="Search any ENS name or Ethereum Address"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  class="ml-1  rounded-lg border border-poly7 bg-poly5 p-2.5 text-sm font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-4 focus:ring-poly4 dark:bg-poly6 dark:hover:bg-poly7 dark:focus:ring-poly8"
+                  className="ml-1  rounded-lg border border-poly7 bg-poly5 p-2.5 text-sm font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-4 focus:ring-poly4 dark:bg-poly6 dark:hover:bg-poly7 dark:focus:ring-poly8"
                 >
                   <svg
-                    class="h-5 w-5"
+                    className="h-5 w-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     ></path>
                   </svg>
-                  <span class="sr-only">Search</span>
+                  <span className="sr-only">Search</span>
                 </button>
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <label className="text-base font-medium text-gray-900">{description}</label>
-                  <p className="text-sm leading-5 text-gray-500">Select your network</p>
+                  <label className="text-base font-medium text-poly5">{description}</label>
+                  <p className="text-sm leading-5 text-poly5">Select your network</p>
                   <fieldset className="mt-4">
                     <legend className="sr-only">Notification method</legend>
                     <div className="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
@@ -117,9 +117,13 @@ export default function FormWallet({ handleSubmit, title, description }) {
                             type="radio"
                             value={notificationMethod.id}
                             defaultChecked={notificationMethod.id === 'ETH'}
-                            className="h-4 w-4 border-poly2 text-poly7 focus:ring-poly6  "
+                            className="form-check-input float-left mt-1
+                             h-4 w-4 appearance-none rounded-full border
+                              border-gray-300 bg-white text-base
+                              bg-contain bg-center bg-no-repeat align-top 
+                              transition duration-200 checked:border-poly7 checked:bg-poly7 focus:outline-none"
                           />
-                          <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium text-poly7">
+                          <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium text-poly5">
                             {notificationMethod.title}
                           </label>
                         </div>
@@ -147,3 +151,29 @@ export default function FormWallet({ handleSubmit, title, description }) {
     </>
   )
 }
+
+//form-check-input appearance-none rounded-full h-4 w-4
+//border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600
+//focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center
+//bg-contain float-left mr-2 cursor-pointer" type="radio"
+
+// className="float-left mt-1  mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border-poly7 bg-white  bg-contain bg-center bg-no-repeat align-top
+//                           text-poly7 transition duration-200  checked:border-poly7 checked:bg-poly5 focus:outline-none "
+//
+
+// <div class="flex justify-center">
+//   <div>
+//     <div class="form-check">
+//       <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+//       <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
+//         Default radio
+//       </label>
+//     </div>
+//     <div class="form-check">
+//       <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+//       <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
+//         Default checked radio
+//       </label>
+//     </div>
+//   </div>
+// </div>

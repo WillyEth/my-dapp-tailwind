@@ -2,23 +2,18 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 
-import ButterFly from '../public/butterfly.svg'
+import Logo from '../public/logo.png'
 import Link from 'next/link'
 import Image from 'next/image'
 
 const navigation = [
   { name: 'Web3', href: '/', current: true },
- 
+
   { name: 'NFT Mint', href: '/mintPage', current: false },
-  { name: 'About', href: 'https://about.nftbutterflylab.com/', current: false },
   { name: 'NFT Finder', href: '/walletPageNft', current: false },
   { name: 'Token Finder', href: '/walletPageToken', current: false },
-
-  {
-    name: 'NFT DAO',
-    href: 'https://www.tally.xyz/gov/guru-research-voting',
-    current: false,
-  },
+  { name: 'NFT DAO', href: 'https://www.tally.xyz/gov/guru-research-voting', current: false },
+  { name: 'About', href: 'https://about.nftbutterflylab.com/', current: false },
 ]
 
 function classNames(...classes) {
@@ -28,14 +23,14 @@ function classNames(...classes) {
 export default function Header() {
   const router = useRouter()
   return (
-    <Disclosure as="nav" className="bg-poly5">
+    <Disclosure as="nav" className="bg-gradient-to-l from-poly3 to-poly5">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-poly6 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-poly7 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -51,28 +46,14 @@ export default function Header() {
                     src="/hacker.png"
                     alt="Your Company"
                   /> */}
-                  <Image
-                    src={ButterFly}
-                    alt="ButterFly Labs"
-                    width={46}
-                    height={46}
-                    priority
-                    className="block lg:hidden"
-                  />
+                  <Image src={Logo} alt="ButterFly Labs" width={46} height={46} className="block lg:hidden" />
                   {/* <img
                     className="hidden h-8 w-auto lg:block"
                     src="/hacker.png"
                     alt="Your Company"
 
                   /> */}
-                  <Image
-                    src={ButterFly}
-                    alt="ButterFly Labs"
-                    width={46}
-                    height={46}
-                    priority
-                    className="hidden lg:block"
-                  />
+                  <Image src={Logo} alt="ButterFly Labs" width={46} height={46} className="hidden   lg:block  " />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -82,8 +63,8 @@ export default function Header() {
                         href={item.href}
                         className={classNames(
                           item.href === router.pathname
-                            ? 'bg-poly7 text-white'
-                            : 'text-poly1 hover:bg-poly6 hover:text-white',
+                            ? 'bg-poly5 text-white'
+                            : 'text-white hover:bg-poly5 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         // aria-current={item.href ? 'page' : undefined}
@@ -181,7 +162,7 @@ export default function Header() {
                   className={classNames(
                     item.href === router.pathname
                       ? 'bg-poly7 text-white'
-                      : 'text-gray-300 hover:bg-poly6 hover:text-white',
+                      : 'text-white hover:bg-poly7 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   // aria-current={item.href ? 'page' : undefined}

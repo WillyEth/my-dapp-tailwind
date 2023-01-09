@@ -1,6 +1,6 @@
 import { BoltIcon, GlobeAltIcon, RocketLaunchIcon, TrophyIcon } from '@heroicons/react/24/outline'
 
-import ButterFly from '../public/butterfly.svg'
+import Logo from '../public/logo.png'
 import Image from 'next/image'
 
 const features = [
@@ -14,7 +14,7 @@ const features = [
   {
     name: 'NFT Mint',
     description:
-      'We would love to help you build your project and see it thrive. No project is too small for us to develop. Join us on this journey by getting involved with NFTs and minting our projects DAO NFT. Show your support and be a part of something great.',
+ 'We specialize in helping beginners bring their projects to life. No matter how small or big your project is, we are here to support you every step of the way. Get involved with us and join the exciting world of NFTs by minting our projects DAO NFT. Together, lets create something great',
     icon: RocketLaunchIcon,
   },
   {
@@ -59,40 +59,59 @@ export default function Featured() {
           <rect width={404} height={784} fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)" />
         </svg> */}
 
-        <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-12 xl:gap-x-16">
-          <div className="lg:col-span-1">
+        <div className="relative lg:grid lg:grid-cols-5 lg:gap-x-12 xl:gap-x-16">
+          <div className="lg:col-span-2 ">
             {/* <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unleashing</h2> */}
-            <h2 className="bg-gradient-to-tr from-poly3 to-poly6 bg-clip-text text-4xl font-extrabold text-transparent">
+            {/* <h2 className="bg-gradient-to-tr from-poly3 to-poly6 bg-clip-text text-4xl font-extrabold text-transparent">
               Unleashing
-            </h2>
-            <h2 className="bg-gradient-to-tr from-poly4 to-poly6 bg-clip-text text-4xl font-extrabold text-transparent">
-              the potential of NFT projects
-            </h2>
-            {/* <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            </h2> */}
+
+            <Image
+              className="absolute h-auto w-full object-cover  mix-blend-overlay lg:object-contain lg:h-full lg:w-full"
+              width={160}
+              height={60}
+              src={Logo}
+              alt=""
+            />
+            <div className="">
+              {/* 
+              <h2 className="bg-poly5 bg-clip-text text-4xl font-extrabold text-transparent">Unleashing</h2> */}
+              <h2 className="pt-20  text-4xl font-extrabold tracking-tight text-poly6">Unleashing</h2>
+              {/* <h2 className="bg-gradient-to-tr from-poly4 to-poly6 bg-clip-text text-4xl font-extrabold text-transparent">
+                the potential of NFT projects
+              </h2> */}
+
+              <h2 className="text-4xl font-extrabold tracking-tight text-poly6 ">the potential of NFT projects</h2>
+              {/* <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               the potential of NFT projects
             </h2> */}
-            <br></br>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              Cutting-edge tech that unlocks unlimited possibilities
-            </h2>
-            <div className="mt-10">
-              <Image className="mx-auto" width={160} height={60} src={ButterFly} alt="" />
+              {/* <div className="mt-10">
+              <Image className="" width={160} height={60} src={Logo} alt="" />
+            </div> */}
+              <br></br>
+              <h2 className="text-3xl font-extrabold tracking-tight text-poly6 sm:text-3xl">
+                Cutting-edge tech that unlocks unlimited possibilities
+              </h2>
+              {/* <div className="mt-10">
+              <Image className="mx-auto" width={160} height={60} src={Logo} alt="" />
+            </div> */}
             </div>
           </div>
+
           {/* <div className="mt-12 >
             <Image className="mx-auto" width={80} height={40} priority src={ButterFly} alt="Crypto Research Hub" />
           </div> */}
 
-          <dl className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-2 lg:mt-0">
+          <dl className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-3 lg:mt-0">
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-polyO5 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-poly5 text-white">
                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
-                  <p className="mt-6 text-lg font-semibold leading-8 text-gray-900">{feature.name}</p>
+                  <p className="mt-6 text-lg font-semibold leading-8 text-poly6">{feature.name}</p>
                 </dt>
-                <dd className="mt-2 text-base text-gray-600">{feature.description}</dd>
+                <dd className="mt-2 text-base text-poly8">{feature.description}</dd>
               </div>
             ))}
           </dl>

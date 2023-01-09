@@ -1,12 +1,13 @@
 import React from 'react'
+import Logo from '../public/logo.png'
 
 export default function TokenTable({ tokenObject }) {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-xl font-semibold text-gray-900">Scan</h1>
-          <p className="mt-2 text-sm text-gray-700">Do not buy/sell/transfer unknown tokens</p>
+          {/* <h1 className="text-xl font-semibold text-gray-900">Scan</h1> */}
+          {/* <p className="mt-2 text-sm text-gray-700">Do not buy/sell/transfer unknown tokens</p> */}
         </div>
         {/* <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
           <button
@@ -54,7 +55,7 @@ export default function TokenTable({ tokenObject }) {
                         <div className="flex items-center">
                           <div className="h-10 w-10 flex-shrink-0">
                             <img
-                              className="h-10 w-10 rounded-full"
+                              className="h-10 w-10 shadow-md"
                               src={
                                 token.logo
                                   ? token.logo
@@ -62,7 +63,7 @@ export default function TokenTable({ tokenObject }) {
                                   ? '/ethereum.png'
                                   : token.symbol === 'MATIC'
                                   ? '/primaryToken.svg'
-                                  : '/butterfly.svg'
+                                  : '/logo.png'
                               }
                               alt="Token Logo"
                             />
@@ -75,10 +76,10 @@ export default function TokenTable({ tokenObject }) {
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         <div className="text-gray-900">{token.balance}</div>
-                        <div className="text-gray-500">Network {token.chain}</div>
+                        <div className="text-poly5">Network {token.chain}</div>
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        <span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
+                        <span className="inline-flex rounded-full bg-poly2 px-2 text-xs font-semibold leading-5 text-green-800">
                           {token.address}
                         </span>
                       </td>
