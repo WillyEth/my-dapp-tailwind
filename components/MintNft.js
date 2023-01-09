@@ -135,7 +135,6 @@ export default function MintNft() {
                               width={160}
                               height={160}
                               alt="Nft Image"
-                              priority
                               className="h-full w-full object-cover object-center"
                             />
                           </span>
