@@ -46,14 +46,26 @@ export default function Header() {
                     src="/hacker.png"
                     alt="Your Company"
                   /> */}
-                  <Image src={Logo} alt="ButterFly Labs" width={46} height={46} className="block lg:hidden" />
+                  <Image
+                    src={Logo}
+                    alt="ButterFly Labs"
+                    width={46}
+                    height={46}
+                    className="block drop-shadow-sm lg:hidden"
+                  />
                   {/* <img
                     className="hidden h-8 w-auto lg:block"
                     src="/hacker.png"
                     alt="Your Company"
 
                   /> */}
-                  <Image src={Logo} alt="ButterFly Labs" width={46} height={46} className="hidden   lg:block  " />
+                  <Image
+                    src={Logo}
+                    alt="ButterFly Labs"
+                    width={46}
+                    height={46}
+                    className="hidden  drop-shadow-sm lg:block  "
+                  />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

@@ -18,7 +18,7 @@ export default function FormWallet({ handleSubmit, title, description }) {
         <div className="flex min-h-full items-center justify-center py-5 px-6 sm:px-9 lg:px-8">
           <div className="w-full max-w-lg space-y-8">
             <div>
-              <Image className="mx-auto" width={80} height={40} priority src={Logo} alt="Butterfly Lab" />
+              <Image className="mx-auto drop-shadow-md" width={80} height={40} priority src={Logo} alt="Butterfly Lab" />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">{title}</h2>
               <p className="mt-2 text-center text-sm text-gray-600">
                 discover whats inside {''}
@@ -82,7 +82,7 @@ export default function FormWallet({ handleSubmit, title, description }) {
                 </div>
                 <button
                   type="submit"
-                  className="ml-1  rounded-lg border border-poly7 bg-poly5 p-2.5 text-sm font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-4 focus:ring-poly4 dark:bg-poly6 dark:hover:bg-poly7 dark:focus:ring-poly8"
+                  className="ml-1  rounded-lg border border-poly5 bg-poly5 p-2.5 text-sm font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-4 focus:ring-poly5 dark:bg-poly5 dark:hover:bg-poly5 dark:focus:ring-poly5"
                 >
                   <svg
                     className="h-5 w-5"
@@ -119,9 +119,9 @@ export default function FormWallet({ handleSubmit, title, description }) {
                             defaultChecked={notificationMethod.id === 'ETH'}
                             className="form-check-input float-left mt-1
                              h-4 w-4 appearance-none rounded-full border
-                              border-gray-300 bg-white text-base
+                              border-poly5 bg-white text-base
                               bg-contain bg-center bg-no-repeat align-top 
-                              transition duration-200 checked:border-poly7 checked:bg-poly7 focus:outline-none"
+                              transition duration-200 checked:border-poly5 checked:bg-poly5 focus:outline-none"
                           />
                           <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium text-poly5">
                             {notificationMethod.title}
@@ -152,28 +152,4 @@ export default function FormWallet({ handleSubmit, title, description }) {
   )
 }
 
-//form-check-input appearance-none rounded-full h-4 w-4
-//border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600
-//focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center
-//bg-contain float-left mr-2 cursor-pointer" type="radio"
 
-// className="float-left mt-1  mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border-poly7 bg-white  bg-contain bg-center bg-no-repeat align-top
-//                           text-poly7 transition duration-200  checked:border-poly7 checked:bg-poly5 focus:outline-none "
-//
-
-// <div class="flex justify-center">
-//   <div>
-//     <div class="form-check">
-//       <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-//       <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault1">
-//         Default radio
-//       </label>
-//     </div>
-//     <div class="form-check">
-//       <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-//       <label class="form-check-label inline-block text-gray-800" for="flexRadioDefault2">
-//         Default checked radio
-//       </label>
-//     </div>
-//   </div>
-// </div>

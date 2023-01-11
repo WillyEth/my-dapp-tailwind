@@ -7,7 +7,6 @@ export const guruAddr = '0x27A5Cef07fE12dBC45f44Ccf89B8f8672f35ECd6'
 
 
 
-
 export const product = {
   name: 'Guru Mint',
   price: '.01 MATIC ',
@@ -30,7 +29,7 @@ export const product = {
     {
       id: 3,
       name: 'Angled view',
-      src: '/guru2.png',
+      src: '/logo.png',
       alt: 'Nft Image',
     },
     {
@@ -42,9 +41,11 @@ export const product = {
     },
   ],
 
-  description: `
- <p>Congratulations on owning a NFT with a vote in a DAO! This means that you have a say in the decision-making process of the decentralized organization that the DAO represents. As a holder of a voting NFT, you have the power to contribute to the direction and governance
-  of the DAO by casting your vote on important matters. Remember to stay informed and exercise your right to vote wisely. </p>`,
+  description: `<p>   
+  Introducing our NFT - a unique, hand-drawn digital collectible granting voting power, future benefits, low price and access to our Polygon-based governance project.
+   Don't miss out on the opportunity to own a truly special NFT, have a say in our project, 
+   and join the dynamic community on the Polygon blockchain.  
+ </p>`,
   details: [
     // {
     //   // name: 'Features',

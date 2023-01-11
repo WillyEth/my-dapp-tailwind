@@ -8,14 +8,21 @@ import {
   chains,
   WagmiConfig,
   RainbowKitProvider,
+  Disclaimer,
   lightTheme,
+  CustomAvatar,
 } from '../utils/walletSetup'
 
 export default function App({ Component, pageProps }) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
+        avatar={CustomAvatar}
         chains={chains}
+        appInfo={{
+          appName: 'NFT ButterFly Lab',
+          disclaimer: Disclaimer,
+        }}
         coolMode={true}
         theme={lightTheme({
           accentColor: '#7B3FE4',

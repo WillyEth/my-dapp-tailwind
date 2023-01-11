@@ -55,13 +55,10 @@ export default function MintNft() {
 
     onError(mintError) {
       setMintingState({ approval: false, minting: false, minted: false })
-      alert("Minting failed. Please try again.")
+      alert('Minting failed. Please try again.')
     },
-    onSettled(data, error) {
- 
-    },
+    onSettled(data, error) {},
     onSuccess(data) {
-   
       setMintingState({ approval: false, minting: true, minted: false })
     },
   })
@@ -124,7 +121,7 @@ export default function MintNft() {
                   {product.images.map((image, index) => (
                     <Tab
                       key={index}
-                      className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-gray-900 hover:bg-poly3 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                      className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                     >
                       {({ selected }) => (
                         <>
@@ -132,15 +129,15 @@ export default function MintNft() {
                           <span className="absolute inset-0 overflow-hidden rounded-md">
                             <Image
                               src={image.src}
-                              width={160}
-                              height={160}
+                              width={600}
+                              height={600}
                               alt="Nft Image"
                               className="h-full w-full object-cover object-center"
                             />
                           </span>
                           <span
                             className={classNames(
-                              selected ? 'ring-polyO4' : 'ring-transparent',
+                              selected ? 'ring-poly5' : 'ring-transparent',
                               'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2'
                             )}
                             aria-hidden="true"
@@ -155,9 +152,11 @@ export default function MintNft() {
               <Tab.Panels className="aspect-w-1 aspect-h-1 w-full">
                 {product.images.map((image) => (
                   <Tab.Panel key={image.id}>
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
+                      width={600}
+                      height={600}
                       className="h-full w-full object-cover object-center sm:rounded-lg"
                     />
                   </Tab.Panel>
@@ -165,22 +164,19 @@ export default function MintNft() {
               </Tab.Panels>
             </Tab.Group>
 
-            {/* Product info */}
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-              <div className="flex justify-between ">
+              <div className="flex justify-between  drop-shadow-xl ">
                 <ConnectButton
                   accountStatus={{
-                    smallScreen: 'address',
+                    smallScreen: 'full',
                     largeScreen: 'full',
                   }}
                 />
-
-                <Image src={poweredByWhite} alt="Powered by PolyGon" width={231} height={44} className="pl-10" />
               </div>
               <div>
                 <h1 className="mt-2 flex flex-col  text-2xl font-bold tracking-tight text-gray-900  lg:flex-row">
-                  {product.name}{' '}
-                  <span className="items-center text-2xl text-poly7 lg:px-6   ">Minted {totalMinted} / 1999</span>
+                  {/* {product.name}{' '} */}
+                  <p className="mt-2 items-center text-3xl drop-shadow-md text-poly7  ">Minted {totalMinted} / 1999</p>
                 </h1>
               </div>
 
@@ -188,17 +184,17 @@ export default function MintNft() {
                 <h2 className="sr-only">NFT information</h2>
                 <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-row">
-                    <Image height={25} weidth={25} alt="Matic Token" src={primaryToken} className="flex sm:flex-row" />
-                    <h3 className="px-3 text-xl tracking-tight text-poly5">{product.price}</h3>
+                    <Image height={25} weidth={25} alt="Matic Token" src={primaryToken} className="flex sm:flex-row drop-shadow-md" />
+                    <h3 className="mt-1 px-3 text-xl tracking-tight text-poly6">{product.price}</h3>
                   </div>
 
-                  <h5 className="mt-2 px-2 text-xs">{guruAddr}</h5>
+                  {/* <h5 className="mt-2 px-2 text-xs">{guruAddr}</h5> */}
                 </div>
               </div>
 
               <div className="mt-3">
                 <h3 className="sr-only">Total Minuted</h3>
-                <p className="max-w-prose mt-1 text-center font-bold">*Currently Testing on POLYGON MUMBAI-TEST*</p>
+                {/* <p className="mt-1 max-w-prose text-center font-bold">*Currently Testing on POLYGON MUMBAI-TEST*</p> */}
                 {/* <ul className="max-w-prose mt-3 list-inside list-disc text-sm font-bold text-gray-500">
                   <li>Suggestion do not use main wallet</li>
                   <li>Add Mumbai at mure sure to include testnet  https://chainlist.org/</li>
@@ -210,7 +206,7 @@ export default function MintNft() {
                 <h3 className="sr-only">Description</h3>
 
                 <div
-                  className="space-y-6 text-base text-gray-700"
+                  className="space-y-6 text-base text-poly6 drop-shadow-sm"
                   dangerouslySetInnerHTML={{ __html: product.description }}
                 />
               </div>
@@ -222,8 +218,8 @@ export default function MintNft() {
                     onClick={handleClick}
                     type="submit"
                     className={clsx(
-                      `border-transparen flex max-w-xs  flex-1 animate-bounce  items-center  justify-center rounded-md
-                      border bg-poly5 py-3 px-8 text-base font-medium hover:bg-poly6 focus:outline-none
+                      `border-transparen flex max-w-xs flex-1  animate-bounce items-center  justify-center  rounded-md border
+                      bg-poly5 py-3 px-8 text-base font-medium drop-shadow-xl hover:bg-poly6 focus:outline-none
                       focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full`,
                       mintingState.approval && 'animate-pulse text-polyO5 ',
                       mintingState.minting && 'animate-pulse  text-polyO5',
@@ -244,27 +240,25 @@ export default function MintNft() {
                   Additional details
                 </h2>
 
-                <div className="divide-y divide-gray-200 border-t">
+                <div className="divide-y divide-poly7 border-t">
                   {product.details.map((detail) => (
                     <Disclosure as="div" key={detail.name}>
                       {({ open }) => (
                         <>
                           <h3>
                             <Disclosure.Button className="group relative flex w-full items-center justify-between py-6 text-left">
-                              <span
-                                className={classNames(open ? 'text-poly6' : 'text-gray-900', 'text-sm font-medium')}
-                              >
+                              <span className={classNames(open ? 'text-poly6' : 'text-poly6', 'text-sm font-medium')}>
                                 {detail.name}
                               </span>
                               <span className="ml-6 flex items-center">
                                 {open ? (
                                   <MinusIcon
-                                    className="block h-6 w-6 text-poly6 group-hover:text-poly9"
+                                    className="block h-6 w-6 text-poly5 group-hover:text-poly6"
                                     aria-hidden="true"
                                   />
                                 ) : (
                                   <PlusIcon
-                                    className="block h-6 w-6 text-poly6 group-hover:text-poly9"
+                                    className="block h-6 w-6 text-poly5 group-hover:text-poly6"
                                     aria-hidden="true"
                                   />
                                 )}
@@ -272,11 +266,22 @@ export default function MintNft() {
                             </Disclosure.Button>
                           </h3>
                           <Disclosure.Panel as="div" className="prose prose-sm pb-6">
-                            <ul role="list">
+                            <ul role="list" className="list-disc pl-7">
                               {detail.items.map((item) => (
-                                <li key={item}>{item}</li>
+                                <li className="text-poly6" key={item}>
+                                  {item}
+                                </li>
                               ))}
                             </ul>
+                            <div>
+                              <Image
+                                src={poweredByWhite}
+                                alt="Powered by PolyGon"
+                                width={231}
+                                height={44}
+                                className="mt-5"
+                              />
+                            </div>
                           </Disclosure.Panel>
                         </>
                       )}

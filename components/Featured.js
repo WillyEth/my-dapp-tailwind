@@ -12,9 +12,8 @@ const features = [
     icon: GlobeAltIcon,
   },
   {
-    name: 'NFT Mint',
-    description:
- 'We specialize in helping beginners bring their projects to life. No matter how small or big your project is, we are here to support you every step of the way. Get involved with us and join the exciting world of NFTs by minting our projects DAO NFT. Together, lets create something great',
+    name: 'Build',
+    description: `We specialize in helping beginners, no matter the project size. Lets create something great together. Get involved with us and join the exciting world of NFTs by minting our DAO NFT projects.`,
     icon: RocketLaunchIcon,
   },
   {
@@ -24,7 +23,7 @@ const features = [
     icon: BoltIcon,
   },
   {
-    name: 'Celebrate Web3',
+    name: 'Web3',
     description:
       'Our project aims to advance the development and use of NFTs. We believe that NFTs have the potential to fundamentally change the way we think about and use digital assets, and are committed to driving innovation in this space.',
 
@@ -67,7 +66,7 @@ export default function Featured() {
             </h2> */}
 
             <Image
-              className="absolute h-auto w-full object-cover  mix-blend-overlay lg:object-contain lg:h-full lg:w-full"
+              className="absolute h-auto w-full object-cover  mix-blend-overlay lg:h-full lg:w-full lg:object-contain"
               width={160}
               height={60}
               src={Logo}
