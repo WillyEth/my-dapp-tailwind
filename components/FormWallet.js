@@ -18,14 +18,19 @@ export default function FormWallet({ handleSubmit, title, description }) {
         <div className="flex min-h-full items-center justify-center py-5 px-6 sm:px-9 lg:px-8">
           <div className="w-full max-w-lg space-y-8">
             <div>
-              <Image className="mx-auto drop-shadow-md" width={80} height={40} priority src={Logo} alt="Butterfly Lab" />
+              <Image
+                className="mx-auto drop-shadow-md"
+                width={80}
+                height={40}
+                priority
+                src={Logo}
+                alt="Butterfly Lab"
+              />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">{title}</h2>
-              <p className="mt-2 text-center text-sm text-gray-600">
-                discover whats inside powered 
-                <p  className="font-medium text-poly7 hover:text-poly6">
-                   by NFT Butterfly tech
-                </p>
-              </p>
+              {/* <p className="mt-2 text-center text-sm text-gray-600">
+                discover whats inside powered  </p> */}
+                <p className="font-medium text-center text-poly7 hover:text-poly6">Powered by NFT Butterfly tech</p>
+            
             </div>
             <form className="mt-4 space-y-6 " action="#" method="POST" onSubmit={handleSubmit}>
               <input type="hidden" name="remember" defaultValue="true" />
@@ -119,8 +124,8 @@ export default function FormWallet({ handleSubmit, title, description }) {
                             defaultChecked={notificationMethod.id === 'ETH'}
                             className="form-check-input float-left mt-1
                              h-4 w-4 appearance-none rounded-full border
-                              border-poly5 bg-white text-base
-                              bg-contain bg-center bg-no-repeat align-top 
+                              border-poly5 bg-white bg-contain
+                              bg-center bg-no-repeat align-top text-base 
                               transition duration-200 checked:border-poly5 checked:bg-poly5 focus:outline-none"
                           />
                           <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium text-poly5">
@@ -132,7 +137,6 @@ export default function FormWallet({ handleSubmit, title, description }) {
                   </fieldset>
                 </div>
               </div>
-
             </form>
           </div>
         </div>
@@ -140,5 +144,3 @@ export default function FormWallet({ handleSubmit, title, description }) {
     </>
   )
 }
-
-

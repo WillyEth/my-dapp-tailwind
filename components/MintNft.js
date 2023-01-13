@@ -154,7 +154,7 @@ export default function MintNft() {
                 </Tab.List>
               </div>
 
-              <Tab.Panels className="w-full transform cursor-pointer  drop-shadow-lg transition duration-500 ease-in-out hover:scale-105">
+              <Tab.Panels className="w-full transform cursor-pointer transition duration-500 ease-in-out hover:scale-105">
                 {/* {product.images.map((image) => ( */}
                 <Tab.Panel key="1">
                   <Image
@@ -163,6 +163,7 @@ export default function MintNft() {
                     // width={600}
                     // height={600}
                     priority={true}
+                    unoptimized={true}
                     blurDataURL="/blur.png"
                     placeholder="blur"
                     className="h-full w-full object-cover object-center sm:rounded-lg"

@@ -77,8 +77,11 @@ export default function WalletScanNft() {
   return (
     <>
       {/* <div className="container mx-auto sm:px-6 lg:px-8"> */}
+
       <div className=" relative  mx-auto max-w-7xl py-1 px-6 sm:py-1 lg:px-8 lg:py-1">
-        <FormWallet handleSubmit={handleSubmit} title="Nft Wallet Scan" description="" />
+        <div>
+          <FormWallet handleSubmit={handleSubmit} title="Nft Wallet Scan" description="" />
+        </div>
         {isError ? <AlertScan /> : null}
         {nftObject ? <NftImages nftList={nftObject} handleNftClick={handleNftClick} /> : null}
         {isLoading ? <Spinner /> : null}
