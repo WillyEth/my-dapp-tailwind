@@ -8,8 +8,8 @@ export const guruAddr = '0x27A5Cef07fE12dBC45f44Ccf89B8f8672f35ECd6'
 
 
 export const product = {
-  name: 'Guru Mint',
-  price: '.01 MATIC ',
+  name: 'NFT Butterfly Lab',
+  price: '1 MATIC ',
   rating: 5,
   images: [
     {

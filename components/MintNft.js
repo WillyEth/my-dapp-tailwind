@@ -164,8 +164,8 @@ export default function MintNft() {
                     // height={600}
                     priority={true}
                     unoptimized={true}
-                    blurDataURL="/blur.png"
-                    placeholder="blur"
+                    // blurDataURL="/blur.png"
+                    // placeholder="blur"
                     className="h-full w-full object-cover object-center sm:rounded-lg"
                   />
                 </Tab.Panel>
@@ -185,7 +185,7 @@ export default function MintNft() {
               <div>
                 <h1 className="mt-2 flex flex-col  text-2xl font-bold tracking-tight text-gray-900  lg:flex-row">
                   {/* {product.name}{' '} */}
-                  <p className="mt-2 items-center text-3xl text-poly7 drop-shadow-md  ">Minted {totalMinted} / 1999</p>
+                  <p className="mt-2 items-center text-3xl text-poly7 drop-shadow-md  ">Minted {totalMinted} / 999</p>
                 </h1>
               </div>
 
@@ -224,6 +224,13 @@ export default function MintNft() {
                   className="space-y-6 text-base text-poly6 drop-shadow-sm"
                   dangerouslySetInnerHTML={{ __html: product.description }}
                 />
+                <ul className="list-disc ml-5 mt-2  text-base text-poly6 drop-shadow-sm">
+                  <li>Fair price and low gas cost, buy multiple</li>
+                  <li>Each mint gives one voting power, in the NFT DAO</li>
+                  <li>50 max per wallet</li> 
+                  <li>Minted on Polygon Network</li>   
+                  <li>One of kind animiated NFT.  Design by a NFT artist</li>             
+                </ul>
               </div>
 
               <div className="sm:flex-col1 mt-10 flex">
