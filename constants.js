@@ -16,29 +16,29 @@ export const product = {
       id: 1,
       name: 'Front View',
 
-      src: '/guru.png',
+      src: '/ButterflyNFTlab-.gif',
       alt: 'Nft Image',
     },
-    {
-      id: 2,
-      name: 'Angled view',
+    // {
+    //   id: 2,
+    //   name: 'Angled view',
 
-      src: '/primaryToken.svg',
-      alt: 'Nft Image',
-    },
-    {
-      id: 3,
-      name: 'Angled view',
-      src: '/logo.png',
-      alt: 'Nft Image',
-    },
-    {
-      id: 4,
-      name: 'Angled view',
+    //   src: '/primaryToken.svg',
+    //   alt: 'Nft Image',
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Angled view',
+    //   src: '/logo.png',
+    //   alt: 'Nft Image',
+    // },
+    // {
+    //   id: 4,
+    //   name: 'Angled view',
 
-      src: '/guru3.png',
-      alt: 'Nft Image',
-    },
+    //   src: '/guru3.png',
+    //   alt: 'Nft Image',
+    // },
   ],
 
   description: `<p>   

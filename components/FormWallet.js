@@ -21,10 +21,10 @@ export default function FormWallet({ handleSubmit, title, description }) {
               <Image className="mx-auto drop-shadow-md" width={80} height={40} priority src={Logo} alt="Butterfly Lab" />
               <h2 className="mt-2 text-center text-2xl font-bold tracking-tight text-poly5">{title}</h2>
               <p className="mt-2 text-center text-sm text-gray-600">
-                discover whats inside {''}
-                <a href="#" className="font-medium text-poly7 hover:text-poly6">
-                  at the Butterfly Lab
-                </a>
+                discover whats inside powered 
+                <p  className="font-medium text-poly7 hover:text-poly6">
+                   by NFT Butterfly tech
+                </p>
               </p>
             </div>
             <form className="mt-4 space-y-6 " action="#" method="POST" onSubmit={handleSubmit}>
@@ -133,17 +133,6 @@ export default function FormWallet({ handleSubmit, title, description }) {
                 </div>
               </div>
 
-              {/* <div>
-                <button
-                  type="submit"
-                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-poly5 py-2 px-4 text-sm font-medium text-white hover:bg-poly6 focus:outline-none focus:ring-2 focus:ring-poly3 focus:ring-offset-2"
-                >
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <LockClosedIcon className="h-5 w-5 text-poly3 group-hover:text-poly2" aria-hidden="true" />
-                  </span>
-                  Scan Wallet
-                </button>
-              </div> */}
             </form>
           </div>
         </div>

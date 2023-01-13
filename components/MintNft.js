@@ -9,6 +9,7 @@ import { guruAbi } from '../utils/guruABI'
 import { guruAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
+
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 
 const contractConfig = {
@@ -117,22 +118,23 @@ export default function MintNft() {
             <Tab.Group as="div" className="flex flex-col-reverse">
               {/* Image selector */}
               <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
-                <Tab.List className="grid grid-cols-4 gap-6">
+                {/* <Tab.List className="grid grid-cols-4 gap-6"> */}
+                <Tab.List className="grid place-items-center">
                   {product.images.map((image, index) => (
                     <Tab
                       key={index}
-                      className="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                      className="relative flex h-40 w-40  cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                     >
                       {({ selected }) => (
                         <>
                           <span className="sr-only"> {image.name} </span>
-                          <span className="absolute inset-0 overflow-hidden rounded-md">
+                          <span className="absolute  inset-0 overflow-hidden rounded-md">
                             <Image
                               src={image.src}
                               width={600}
                               height={600}
                               alt="Nft Image"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full  object-cover object-center"
                             />
                           </span>
                           <span
@@ -149,7 +151,7 @@ export default function MintNft() {
                 </Tab.List>
               </div>
 
-              <Tab.Panels className="aspect-w-1 aspect-h-1 w-full">
+              <Tab.Panels className="aspect-w-1 aspect-h-1 w-full drop-shadow-lg">
                 {product.images.map((image) => (
                   <Tab.Panel key={image.id}>
                     <Image
@@ -176,7 +178,7 @@ export default function MintNft() {
               <div>
                 <h1 className="mt-2 flex flex-col  text-2xl font-bold tracking-tight text-gray-900  lg:flex-row">
                   {/* {product.name}{' '} */}
-                  <p className="mt-2 items-center text-3xl drop-shadow-md text-poly7  ">Minted {totalMinted} / 1999</p>
+                  <p className="mt-2 items-center text-3xl text-poly7 drop-shadow-md  ">Minted {totalMinted} / 1999</p>
                 </h1>
               </div>
 
@@ -184,7 +186,13 @@ export default function MintNft() {
                 <h2 className="sr-only">NFT information</h2>
                 <div className="flex flex-col lg:flex-row">
                   <div className="flex flex-row">
-                    <Image height={25} weidth={25} alt="Matic Token" src={primaryToken} className="flex sm:flex-row drop-shadow-md" />
+                    <Image
+                      height={25}
+                      weidth={25}
+                      alt="Matic Token"
+                      src={primaryToken}
+                      className="flex drop-shadow-md sm:flex-row"
+                    />
                     <h3 className="mt-1 px-3 text-xl tracking-tight text-poly6">{product.price}</h3>
                   </div>
 
