@@ -122,7 +122,7 @@ export default function MintNft() {
                 {/* <Tab.List className="grid grid-cols-4 gap-6"> */}
                 <Tab.List className="grid place-items-center">
                   {/* {product.images.map((image, index) => ( */}
-                  <Tab
+                  {/* <Tab
                     // key={index}
                     className="relative flex h-40 w-40  cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                   >
@@ -147,7 +147,7 @@ export default function MintNft() {
                         />
                       </>
                     )}
-                  </Tab>
+                  </Tab> */}
                   {/* // ))} */}
                 </Tab.List>
               </div>
@@ -160,7 +160,7 @@ export default function MintNft() {
                       alt="ButterflyNft"
                       // width={600}
                       // height={600}
-                      // priority={true}
+                       priority={true}
                       className="h-full w-full object-cover object-center sm:rounded-lg"
                     />
                   </Tab.Panel>
