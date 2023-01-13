@@ -132,8 +132,8 @@ export default function MintNft() {
                         <span className="absolute  inset-0 overflow-hidden rounded-md">
                           <Image
                             src={ButterflyNft}
-                            width={600}
-                            height={600}
+                            // width={600}
+                            // height={600}
                             alt="Nft Image"
                             className="h-full w-full  object-cover object-center"
                           />
@@ -158,8 +158,8 @@ export default function MintNft() {
                     <Image
                       src={ButterflyNft}
                       alt="ButterflyNft"
-                      width={600}
-                      height={600}
+                      // width={600}
+                      // height={600}
                       // priority={true}
                       className="h-full w-full object-cover object-center sm:rounded-lg"
                     />
