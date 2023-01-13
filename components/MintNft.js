@@ -9,6 +9,7 @@ import { guruAbi } from '../utils/guruABI'
 import { guruAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
+import ButterflyNft from '../public/ButterflyNFTlab.gif'
 
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 
@@ -120,49 +121,50 @@ export default function MintNft() {
               <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
                 {/* <Tab.List className="grid grid-cols-4 gap-6"> */}
                 <Tab.List className="grid place-items-center">
-                  {product.images.map((image, index) => (
-                    <Tab
-                      key={index}
-                      className="relative flex h-40 w-40  cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
-                    >
-                      {({ selected }) => (
-                        <>
-                          <span className="sr-only"> {image.name} </span>
-                          <span className="absolute  inset-0 overflow-hidden rounded-md">
-                            <Image
-                              src={image.src}
-                              width={600}
-                              height={600}
-                              alt="Nft Image"
-                              className="h-full w-full  object-cover object-center"
-                            />
-                          </span>
-                          <span
-                            className={classNames(
-                              selected ? 'ring-poly5' : 'ring-transparent',
-                              'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2'
-                            )}
-                            aria-hidden="true"
+                  {/* {product.images.map((image, index) => ( */}
+                  <Tab
+                    // key={index}
+                    className="relative flex h-40 w-40  cursor-pointer items-center justify-center rounded-md bg-poly2 text-sm font-medium uppercase text-poly5 hover:bg-poly4 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                  >
+                    {({ selected }) => (
+                      <>
+                        <span className="sr-only">ButterfyLfy NFT</span>
+                        <span className="absolute  inset-0 overflow-hidden rounded-md">
+                          <Image
+                            src={ButterflyNft}
+                            width={600}
+                            height={600}
+                            alt="Nft Image"
+                            className="h-full w-full  object-cover object-center"
                           />
-                        </>
-                      )}
-                    </Tab>
-                  ))}
+                        </span>
+                        <span
+                          className={classNames(
+                            selected ? 'ring-poly5' : 'ring-transparent',
+                            'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2'
+                          )}
+                          aria-hidden="true"
+                        />
+                      </>
+                    )}
+                  </Tab>
+                  {/* // ))} */}
                 </Tab.List>
               </div>
 
               <Tab.Panels className="aspect-w-1 aspect-h-1 w-full drop-shadow-lg">
-                {product.images.map((image) => (
-                  <Tab.Panel key={image.id}>
+                {/* {product.images.map((image) => ( */}
+                  <Tab.Panel key="1">
                     <Image
-                      src={image.src}
-                      alt={image.alt}
+                      src={ButterflyNft}
+                      alt="ButterflyNft"
                       width={600}
                       height={600}
+                      // priority={true}
                       className="h-full w-full object-cover object-center sm:rounded-lg"
                     />
                   </Tab.Panel>
-                ))}
+                {/* ))} */}
               </Tab.Panels>
             </Tab.Group>
 
