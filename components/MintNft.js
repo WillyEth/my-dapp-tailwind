@@ -10,6 +10,7 @@ import { guruAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
 import ButterflyNft from '../public/ButterflyNFTlab.gif'
+//  import ButterflyNft from '../public/n.mp4'
 
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 
@@ -152,18 +153,18 @@ export default function MintNft() {
                 </Tab.List>
               </div>
 
-              <Tab.Panels className="aspect-w-1 aspect-h-1 w-full drop-shadow-lg">
+              <Tab.Panels className="aspect-w-1 aspect-h-1 w-full transform cursor-pointer  drop-shadow-lg transition duration-500 ease-in-out hover:scale-105">
                 {/* {product.images.map((image) => ( */}
-                  <Tab.Panel key="1">
-                    <Image
-                      src={ButterflyNft}
-                      alt="ButterflyNft"
-                      // width={600}
-                      // height={600}
-                       priority={true}
-                      className="h-full w-full object-cover object-center sm:rounded-lg"
-                    />
-                  </Tab.Panel>
+                <Tab.Panel key="1">
+                  <Image
+                    src={ButterflyNft}
+                    alt="ButterflyNft"
+                    width={600}
+                    height={600}
+                    priority={true}
+                    className="h-full w-full object-cover object-center sm:rounded-lg"
+                  />
+                </Tab.Panel>
                 {/* ))} */}
               </Tab.Panels>
             </Tab.Group>
