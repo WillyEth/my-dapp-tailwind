@@ -5,7 +5,7 @@ import WalletScanNft from '../components/WalletScanNft'
 function WalletPageNft() {
   return (
     <>
-      <Metatags title="NFT Finder" />
+      <Metatags/>
       <WalletScanNft />
     </>
   )

@@ -5,7 +5,7 @@ import WalletScanToken from '../components/WalletScanToken'
 function WalletPageToken() {
   return (
     <>
-      <Metatags title="Token Finder" />
+      <Metatags/>
       <WalletScanToken />
     </>
   )

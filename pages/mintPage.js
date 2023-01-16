@@ -5,8 +5,7 @@ import MintNft from '../components/MintNft'
 function MintPage() {
   return (
     <>
-      <Metatags title="NFT Mint" />
-
+      <Metatags />
       <MintNft />
     </>
   )

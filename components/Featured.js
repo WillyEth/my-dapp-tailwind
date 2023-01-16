@@ -66,13 +66,13 @@ export default function Featured() {
             </h2> */}
 
             <Image
-              className="absolute h-auto w-full object-cover  mix-blend-overlay lg:h-full lg:w-full lg:object-contain"
+              className="absolute  h-auto w-full object-cover mix-blend-overlay  lg:h-full lg:w-full lg:object-contain"
               width={160}
               height={60}
               src={Logo}
               alt=""
             />
-            <div className="">
+            <div className="isolate">
               {/* 
               <h2 className="bg-poly5 bg-clip-text text-4xl font-extrabold text-transparent">Unleashing</h2> */}
               <h2 className="pt-20  text-4xl font-extrabold tracking-tight text-poly6">Unleashing</h2>
@@ -101,16 +101,16 @@ export default function Featured() {
             <Image className="mx-auto" width={80} height={40} priority src={ButterFly} alt="Crypto Research Hub" />
           </div> */}
 
-          <dl className="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-3 lg:mt-0">
+          <dl className=" mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-x-12 lg:col-span-3 lg:mt-0">
             {features.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-poly5 text-white">
+                  <div className="isolate flex h-12 w-12 items-center justify-center rounded-xl bg-poly5 text-white">
                     <feature.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
-                  <p className="mt-6 text-lg font-semibold leading-8 text-poly6">{feature.name}</p>
+                  <p className="isolate mt-6 text-lg font-semibold leading-8 text-poly6">{feature.name}</p>
                 </dt>
-                <dd className="mt-2 text-base text-poly8">{feature.description}</dd>
+                <dd className="isolate mt-2 text-base text-poly6">{feature.description}</dd>
               </div>
             ))}
           </dl>

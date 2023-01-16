@@ -3,7 +3,8 @@ import Head from 'next/head'
 export default function MetaTags({
   title = 'NFTs, Simplified: Butterfly Labs',
   description = 'NFTs, Simplified: Butterfly Labs is committed to providing expert guidance and education on non-fungible tokens (NFTs). Our goal is to help clients understand and effectively utilize NFTs to achieve their goals, through informed decision making and expert consultation. We serve a diverse range of clients, from experienced crypto enthusiasts to those new to the world of NFTs',
-  URL = 'https://gateway.ipfs.io/ipfs/QmQFMRmr31BwvKepJcyV63QLNGwHtRY17hkbnkZ2Nzkkfa',
+  URL = 'https://nftbutterflylab.com/logo.png',
+  mainURL = 'https://nftbutterflylab.com/',
 }) {
   return (
     <Head>
@@ -16,7 +17,7 @@ export default function MetaTags({
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={URL} />
+      <meta property="og:url" content={mainURL} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={URL} />
@@ -25,14 +26,14 @@ export default function MetaTags({
       <meta property="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@btwit71" />
       <meta name="twitter:site" content="@btwit71"></meta>
-      <meta property="twitter:url" content={URL} />
+      <meta property="twitter:url" content={mainURL} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={URL}></meta>
 
       <meta
         name="keywords"
-        content="crypto, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT, Butterfly, Consulting, DAO, Matic, ETH"
+        content="crypto, labs, WEB3, research, bitcoin, etherum, DYOR, hub, Guru, Matic, Polygon, NFT, Butterfly, Consulting, DAO, Matic, ETH"
       />
       <meta name="author" content="Willy Eth" />
       <meta name="copyright" content="Copyright Willy Eth 2023" />
