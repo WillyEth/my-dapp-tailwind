@@ -22,22 +22,33 @@ import {
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import Logo from '../public/logo.png'
 import Image from 'next/image'
-
 import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { publicProvider } from 'wagmi/providers/public'
-
-const appName = 'NFT ButterFly Lab'
 
 export const { chains, provider } = configureChains(
   [polygonMumbai],
   [
     alchemyProvider({
+      // apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
       apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
       priority: 0,
     }),
     //
   ]
 )
+
+// const getConfig = async () => {
+//   const endpoint = `${SERVER}/api/getConfigureChains`
+//   const response = await fetch(endpoint, {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   })
+//   const walletConfigure = await response.json()
+
+//   return walletConfigure
+// }
+
 let CustomAvatar = AvatarComponent
 
 CustomAvatar = ({ address, ensImage, size }) => {
@@ -57,11 +68,6 @@ Disclaimer = ({ Text, Link }) => (
     read and understand the protocol <Link href="https://about.nftbutterflylab.com/notices/disclaimer">Disclaimer</Link>
   </Text>
 )
-
-// const { connectors } = getDefaultWallets({
-//   appName: 'NFT Butterly Lab',
-//   chains,
-// })
 
 const connectors = connectorsForWallets([
   {

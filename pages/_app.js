@@ -3,6 +3,7 @@ import '../styles/globals.css'
 // const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 import { Analytics } from '@vercel/analytics/react'
 import Layout from '../components/Layout'
+
 import {
   wagmiClient,
   chains,

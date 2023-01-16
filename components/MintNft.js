@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import poweredByWhite from '../public/poweredbyWhite.svg'
@@ -10,7 +11,7 @@ import { guruAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
 import ButterflyNft from '../public/ButterflyNFTlab.gif'
-import Blur from '../public/blur.png'
+
 //  import ButterflyNft from '../public/n.mp4'
 
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
@@ -29,9 +30,10 @@ const payment = ethers.utils.parseEther('.01')
 export default function MintNft() {
   const [mounted, setMounted] = React.useState(false)
   const [totalMinted, setTotalMinted] = React.useState(0)
+  const [isWatch, setIsWatch] = React.useState(false)
 
   const [mintingState, setMintingState] = React.useState({ approval: false, minting: false, minted: false })
-
+ 
   const { isConnected } = useAccount()
   React.useEffect(() => {
     setMounted(true)
@@ -41,10 +43,12 @@ export default function MintNft() {
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
     functionName: 'mint',
+
     overrides: {
       value: payment,
     },
   })
+
   //WRITE
   const {
     data: mintData,
@@ -81,22 +85,27 @@ export default function MintNft() {
     },
     onError(error) {
       setMintingState({ approval: false, minting: false, minted: false })
+      setIsWatch(false)
       alert('Minting failed. Please try again.')
     },
   })
 
   React.useEffect(() => {
     if (mintingState.minted) {
+      setIsWatch(true)
       setTimeout(() => {
         setMintingState({ approval: false, minting: false, minted: false })
+        setIsWatch(false)
       }, 5000)
     }
   }, [mintingState.minted])
 
+  //READ
+
   const { data: totalSupplyData } = useContractRead({
     ...contractConfig,
     functionName: 'totalSupply',
-    watch: true,
+    watch: isWatch,
   })
 
   React.useEffect(() => {
@@ -224,12 +233,12 @@ export default function MintNft() {
                   className="space-y-6 text-base text-poly6 drop-shadow-sm"
                   dangerouslySetInnerHTML={{ __html: product.description }}
                 />
-                <ul className="list-disc ml-5 mt-2  text-base text-poly6 drop-shadow-sm">
+                <ul className="ml-5 mt-2 list-disc  text-base text-poly6 drop-shadow-sm">
                   <li>Fair price and low gas cost, buy multiple</li>
                   <li>Each mint gives one voting power, in the NFT DAO</li>
-                  <li>50 max per wallet</li> 
-                  <li>Minted on Polygon Network</li>   
-                  <li>One of kind animiated NFT.  Design by a NFT artist</li>             
+                  <li>50 max per wallet</li>
+                  <li>Minted on Polygon Network</li>
+                  <li>One of kind animiated NFT. Design by a NFT artist</li>
                 </ul>
               </div>
 
@@ -245,7 +254,7 @@ export default function MintNft() {
                       focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full`,
                       mintingState.approval && 'animate-pulse text-polyO5 ',
                       mintingState.minting && 'animate-pulse  text-polyO5',
-                      mintingState.minted && 'bg-polyG5 text-polyO5',
+                      mintingState.minted && 'bg-poly7 text-polyO5',
                       !mintingState.approval && !mintingState.minting && !mintingState.minted && 'text-white'
                     )}
                   >
