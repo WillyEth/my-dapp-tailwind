@@ -55,7 +55,7 @@ CustomAvatar = ({ address, ensImage, size }) => {
   return ensImage ? (
     <img src={ensImage} width={size} height={size} style={{ borderRadius: 999 }} />
   ) : (
-    <Image src={Logo} width={size} height={size} alt="" className="bg-poly3" />
+    <Image src={Logo} width={size} height={size} alt="" />
   )
 }
 

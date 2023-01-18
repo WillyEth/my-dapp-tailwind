@@ -253,9 +253,9 @@ export default function MintNft() {
                       `border-transparen flex max-w-xs flex-1  animate-bounce items-center  justify-center  rounded-md border
                       bg-poly5 py-3 px-8 text-base font-medium drop-shadow-xl hover:bg-poly6 focus:outline-none
                       focus:ring-2 focus:ring-poly8 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full`,
-                      mintingState.approval && 'animate-pulse text-polyO5 ',
-                      mintingState.minting && 'animate-pulse  text-polyO5',
-                      mintingState.minted && 'bg-poly7 text-polyO5',
+                      mintingState.approval && 'animate-pulse text-white ',
+                      mintingState.minting && 'animate-pulse  text-white',
+                      mintingState.minted && 'bg-poly7 text-white',
                       !mintingState.approval && !mintingState.minting && !mintingState.minted && 'text-white'
                     )}
                   >
