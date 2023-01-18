@@ -1,7 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { HeartIcon, XMarkIcon } from '@heroicons/react/24/outline'
-// import { PencilIcon, PlusIcon } from '@heroicons/react/20/solid'
+import Logo from '../public/logo.png'
+import Image from 'next/image'
+ 
 
 export default function SideOutNft({ nftObject, handleCloseSideOut }) {
   const [open, setOpen] = useState(true)
@@ -79,13 +81,17 @@ export default function SideOutNft({ nftObject, handleCloseSideOut }) {
                             </h2>
                             <p className="text-sm font-medium text-gray-500">{nftObject?.tokenId}</p>
                           </div>
-                          <button
-                            type="button"
-                            className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                          >
-                            <HeartIcon className="h-6 w-6" aria-hidden="true" />
-                            <span className="sr-only">Favorite</span>
-                          </button>
+                          <div className="ml-4 flex h-8 w-8 items-center justify-center">
+                            {/* <HeartIcon className="h-6 w-6" aria-hidden="true" /> */}
+                            <Image
+                              src={Logo}
+                              alt="Logo"
+                              width={50}
+                              height={50}
+                              className="transform  cursor-pointer transition duration-500 ease-in-out hover:scale-105 hover:bg-white hover:shadow-lg"
+                            />
+                            <span className="sr-only">NFT Butterfly Lab Logo</span>
+                          </div>
                         </div>
                       </div>
                       <div>

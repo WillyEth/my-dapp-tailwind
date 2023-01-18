@@ -11,7 +11,7 @@ export default function MetaTags({
       <title>{title}</title>
 
       {/* {<!-- Primary Meta Tags --> */}
-      <title>NFTs Butterfly Labs</title>
+      <title>NFT Butterfly Labs</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 

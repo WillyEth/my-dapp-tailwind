@@ -26,7 +26,7 @@ export default function NftImages({ nftList, handleNftClick }) {
               <dd className="text-ellipsis break-words text-sm text-gray-500">{nft.description?.substring(0, 500)}</dd>
               <dt className="sr-only">Description</dt>
               <dd className="mt-3">
-                <span className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
+                <span className="rounded-full bg-poly3 px-2 py-1 text-xs font-medium text-green-800">
                   Token # {nft.tokenId?.substring(0, 20)}
                 </span>
               </dd>

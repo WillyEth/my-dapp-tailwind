@@ -7,7 +7,8 @@ import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { guruAbi } from '../utils/guruABI'
-import { guruAddr, product } from '../constants'
+import { BTLYAbi } from '../utils/butterflyABI'
+import { guruAddr, BTLYAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
 import ButterflyNft from '../public/ButterflyNFTlab.gif'
@@ -17,15 +18,15 @@ import ButterflyNft from '../public/ButterflyNFTlab.gif'
 import { useAccount, useContractRead, useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
 
 const contractConfig = {
-  address: guruAddr,
-  abi: guruAbi,
+  address: BTLYAddr,
+  abi: BTLYAbi,
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const payment = ethers.utils.parseEther('.01')
+const payment = ethers.utils.parseEther('1')
 
 export default function MintNft() {
   const [mounted, setMounted] = React.useState(false)
@@ -33,7 +34,7 @@ export default function MintNft() {
   const [isWatch, setIsWatch] = React.useState(false)
 
   const [mintingState, setMintingState] = React.useState({ approval: false, minting: false, minted: false })
- 
+
   const { isConnected } = useAccount()
   React.useEffect(() => {
     setMounted(true)
