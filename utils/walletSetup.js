@@ -1,6 +1,6 @@
 import '@rainbow-me/rainbowkit/styles.css'
 import process from 'process'
-import { polygonMumbai } from 'wagmi/chains'
+import { polygonMumbai, polygon } from 'wagmi/chains'
 import {
   getDefaultWallets,
   RainbowKitProvider,
@@ -25,11 +25,11 @@ import Image from 'next/image'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 
 export const { chains, provider } = configureChains(
-  [polygonMumbai],
+  [polygon],
   [
     alchemyProvider({
       // apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
-      apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
+      apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_POLYGON,
       priority: 0,
     }),
     //
