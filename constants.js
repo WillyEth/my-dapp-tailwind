@@ -1,7 +1,6 @@
 const process = require('process')
 const dev = process.env.NODE_ENV !== 'production'
 export const SERVER = dev ? 'http://localhost:3000' : 'https://nftbutterflylab.com'
-export const guruAddr = '0x27A5Cef07fE12dBC45f44Ccf89B8f8672f35ECd6'
 export const BTLYAddr = '0xCF49e18E28c942a2B8dd04ccb66c4964EaE2Cbf2'
 
 export const product = {

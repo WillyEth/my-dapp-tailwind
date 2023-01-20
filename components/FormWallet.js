@@ -7,7 +7,7 @@ import Logo from '../public/logo.png'
 const notificationMethods = [
   { id: 'ETH', title: 'Ethereum' },
   { id: 'MATIC', title: 'Polygon' },
-  { id: 'MUMBAI', title: 'Mumbai' },
+  // { id: 'MUMBAI', title: 'Mumbai' },
 ]
 
 export default function FormWallet({ handleSubmit, title, description }) {

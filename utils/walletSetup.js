@@ -28,7 +28,6 @@ export const { chains, provider } = configureChains(
   [polygon],
   [
     alchemyProvider({
-      // apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_MUMBAI,
       apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY_POLYGON,
       priority: 0,
     }),
