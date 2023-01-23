@@ -7,13 +7,12 @@ const features = [
   {
     name: 'Discover',
     description:
-      'NFTs have the potential to change the way we use digital assets by verifying ownership, enabling new forms of trade, and allowing for the monetization of digital content. The possibilities for NFTs are vast and varied.',
-
+      `NFTs are like the wild west of digital assets - anything goes! They're like the sheriffs that come to town and give all your digital goodies a fancy badge, so everyone knows they're yours. With NFTs, you can trade your digital assets like a boss, and even make money from them. It's like being a digital prospector and striking gold in the form of memes, videos, and even tweets. The possibilities are endless and it's sure to be a wild ride. So grab your digital pickaxe and let's get to prospecting!`,
     icon: GlobeAltIcon,
   },
   {
     name: 'Build',
-    description: `We specialize in helping beginners, no matter the project size. Lets create something great together. Get involved with us and join the exciting world of NFTs by minting our DAO NFT projects.`,
+    description: `Our mission is to democratize the world of digital assets and make them accessible to everyone, from NFT newbies to crypto veterans. We're taking the stuffy world of NFTs and giving it a good old fashioned wedgie. So whether you're a big shot investor or just dipping your toes in, we've got an NFT for you. Stay tuned for some wild and crazy NFT offerings coming your way!`,
     icon: RocketLaunchIcon,
   },
   {

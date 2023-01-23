@@ -2,7 +2,13 @@ import Head from 'next/head'
 
 export default function MetaTags({
   title = 'NFTs, Simplified: Butterfly Labs',
-  description = 'NFTs, Simplified: Butterfly Labs is committed to providing expert guidance and education on non-fungible tokens (NFTs). Our goal is to help clients understand and effectively utilize NFTs to achieve their goals, through informed decision making and expert consultation. We serve a diverse range of clients, from experienced crypto enthusiasts to those new to the world of NFTs',
+  description = `
+   Our goal is to provide access to unique and valuable digital assets for individuals of all experience levels
+   and investment sizes. We believe that NFTs have the potential to revolutionize the way we think about ownership and value,
+   and we want to make sure that everyone has the opportunity to be a part of this movement. Whether
+   you're an experienced crypto investor or new to the world of NFTs, we want to make sure that you have
+   the opportunity to own a piece of the future. Stay tuned for more information on our upcoming NFT offerings!`,
+
   URL = 'https://nftbutterflylab.com/logo.png',
   mainURL = 'https://nftbutterflylab.com/',
 }) {

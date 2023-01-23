@@ -6,12 +6,12 @@ import poweredByWhite from '../public/poweredbyWhite.svg'
 import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { guruAbi } from '../utils/guruABI'
 import { BTLYAbi } from '../utils/butterflyABI'
-import { guruAddr, BTLYAddr, product } from '../constants'
+import { BTLYAddr, product } from '../constants'
 import clsx from 'clsx'
 import { ethers } from 'ethers'
 import ButterflyNft from '../public/ButterflyNFTlab.gif'
+import Link from 'next/link'
 
 //  import ButterflyNft from '../public/n.mp4'
 
@@ -227,7 +227,7 @@ export default function MintNft() {
                 </ul> */}
               </div>
 
-              <div className="mt-6">
+              <div className="mt-2">
                 <h3 className="sr-only">Description</h3>
 
                 <div
@@ -235,11 +235,11 @@ export default function MintNft() {
                   dangerouslySetInnerHTML={{ __html: product.description }}
                 />
                 <ul className="ml-5 mt-2 list-disc  text-base text-poly6 drop-shadow-sm">
-                  <li>Fair price and low gas cost, buy multiple</li>
-                  <li>Each mint gives one voting power, in the NFT DAO</li>
-                  <li>50 max per wallet</li>
-                  <li>Minted on Polygon Network</li>
-                  <li>One of kind animiated NFT. Design by a NFT artist</li>
+                  <li>Mint on the Polygon Network and pay a fair price with low gas costs</li>
+                  <li>Buy multiple mints and gain voting power in the NFT DAO</li>
+                  <li>Limited to 50 mints per wallet, so act fast!</li>
+                  <li>Be at the front of the line for our next amazing NFT by joining our whitelist today</li>
+                  <li>Own a one-of-a-kind, artist-generated animated NFT!</li>
                 </ul>
               </div>
 
@@ -267,7 +267,7 @@ export default function MintNft() {
                 )}
               </div>
 
-              <section aria-labelledby="details-heading" className="mt-12">
+              <section aria-labelledby="details-heading" className="mt-4">
                 <h2 id="details-heading" className="sr-only">
                   Additional details
                 </h2>
@@ -297,22 +297,33 @@ export default function MintNft() {
                               </span>
                             </Disclosure.Button>
                           </h3>
-                          <Disclosure.Panel as="div" className="prose prose-sm pb-6">
+                          <Disclosure.Panel as="div" className="prose prose-sm pb-4">
                             <ul role="list" className="list-disc pl-7">
                               {detail.items.map((item) => (
                                 <li className="text-poly6" key={item}>
                                   {item}
                                 </li>
                               ))}
+                              <li>
+                                <Link
+                                  href="https://about.nftbutterflylab.com/notices/disclaimer"
+                                  className="pb-6 text-base text-poly6 hover:text-poly7 "
+                                  aria-current="Disclaimer"
+                                >
+                                  Disclaimer
+                                </Link>
+                              </li>
                             </ul>
                             <div>
-                              <Image
-                                src={poweredByWhite}
-                                alt="Powered by PolyGon"
-                                width={231}
-                                height={44}
-                                className="mt-5"
-                              />
+                              <Link href="https://polygon.technology/">
+                                <Image
+                                  src={poweredByWhite}
+                                  alt="Powered by PolyGon"
+                                  width={231}
+                                  height={44}
+                                  className="mt-5 transform cursor-pointer transition duration-500 ease-in-out hover:scale-105"
+                                />
+                              </Link>
                             </div>
                           </Disclosure.Panel>
                         </>

@@ -38,9 +38,8 @@ export const product = {
   ],
 
   description: `<p>   
-  Introducing our NFT - a unique, hand-drawn digital collectible granting voting power, future benefits, low price and access to our Polygon-based governance project.
-   Don't miss out on the opportunity to own a truly special NFT, have a say in our project, 
-   and join the dynamic community on the Polygon blockchain.  
+Introducing our first NFT - a one-of-a-kind, hand-drawn digital collectible that will flutter its way into your heart and wallet! Not only will it give you voting power in our project, but it also comes with future benefits that are sure to make your wallet soar. And the best part? It's priced lower than a monarch butterfly's weight in gold. Don't miss out on the chance to own a truly unique NFT,
+ become a part of our colorful community on the Polygon blockchain, and watch your investment take flight!
  </p>`,
   details: [
     // {
@@ -53,7 +52,7 @@ export const product = {
     //   // ],
     // },
     {
-      name: 'PolyGon Network',
+      name: 'About PolyGon Network and Disclaimer',
       items: ['Broader Reach', 'Speed and Cheapness', 'Lower Gas Fee Compared to Ethereum'],
     },
     // More sections...
