@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { Disclosure, Tab } from '@headlessui/react'
-import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { MinusIcon, PlusIcon, WalletIcon } from '@heroicons/react/24/outline'
 import poweredByWhite from '../public/poweredbyWhite.svg'
 import Image from 'next/image'
 import primaryToken from '../public/primaryToken.svg'
@@ -212,13 +212,21 @@ export default function MintNft() {
                     />
                     <h3 className="mt-1 px-3 text-xl tracking-tight text-poly6">{product.price}</h3>
                   </div>
+                  <div className="flex flex-row">
+                    <WalletIcon className=" h-8 w-7 text-poly6" aria-hidden="Wallet Icon" />
 
-                  {/* <h5 className="mt-2 px-2 text-xs">{guruAddr}</h5> */}
+                    <Link
+                      className="pt-1 pl-1 text-base text-poly5  hover:text-poly7"
+                      href="https://about.nftbutterflylab.com/product-guides/how-to-add-polygon-network"
+                    >
+                      How to Add Polygon Network
+                    </Link>
+                  </div>
                 </div>
               </div>
 
               <div className="mt-3">
-                <h3 className="sr-only">Total Minuted</h3>
+                <h3 className="sr-only">Total Minted</h3>
                 {/* <p className="mt-1 max-w-prose text-center font-bold">*Currently Testing on POLYGON MUMBAI-TEST*</p> */}
                 {/* <ul className="max-w-prose mt-3 list-inside list-disc text-sm font-bold text-gray-500">
                   <li>Suggestion do not use main wallet</li>
