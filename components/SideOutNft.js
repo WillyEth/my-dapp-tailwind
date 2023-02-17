@@ -3,11 +3,10 @@ import { Dialog, Transition } from '@headlessui/react'
 import { HeartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../public/logo.png'
 import Image from 'next/image'
- 
 
 export default function SideOutNft({ nftObject, handleCloseSideOut }) {
   const [open, setOpen] = useState(true)
-
+  console.log('nftObject', nftObject)
   const handleOnClose = () => {
     setOpen(false)
     handleCloseSideOut()
@@ -95,7 +94,25 @@ export default function SideOutNft({ nftObject, handleCloseSideOut }) {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-medium text-gray-900">Information</h3>
+                        {/* //if spam info map out */}
+                        {/* map out spam info */}
+                        <div>
+                          {nftObject?.spamInfo && (
+                            <>
+                              <div className="bg-polyO4">
+                                <h1 className="text-center font-extrabold">Spam NFT Please Verify</h1>
+
+                                <ul>
+                                  {nftObject?.spamInfo.classifications.map((classification, index) => (
+                                    <li key={index}>{classification}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </>
+                          )}
+                        </div>
+
+                        <h3 className="pt-2 font-medium text-gray-900">Information</h3>
                         <dl className="mt-2 divide-y divide-gray-200 border-t border-b border-gray-200">
                           <div className="flex justify-between py-3 text-sm font-medium">
                             {/* <dt className="text-gray-500">Uploaded by</dt> */}

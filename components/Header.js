@@ -10,8 +10,8 @@ const navigation = [
   { name: 'Web3', href: '/', current: true },
 
   { name: 'NFT Mint', href: '/mintPage', current: false },
-  { name: 'NFT Finder', href: '/walletPageNft', current: false },
-  { name: 'Token Finder', href: '/walletPageToken', current: false },
+  { name: 'NFT Scanner', href: '/walletPageNft', current: false },
+  { name: 'Token Scanner', href: '/walletPageToken', current: false },
   { name: 'NFT DAO', href: 'https://www.tally.xyz/gov/nft-butterfly-lab-gov', current: false },
   { name: 'About', href: 'https://about.nftbutterflylab.com/', current: false },
 ]

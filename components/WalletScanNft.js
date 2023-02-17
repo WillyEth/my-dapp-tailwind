@@ -7,6 +7,7 @@ import { SERVER } from '../constants'
 import { resolveLink } from '../utils/general'
 import FormWallet from './FormWallet.js'
 import SideOutNft from './SideOutNft'
+import SpamWarning from './SpamWarning'
 
 export default function WalletScanNft() {
   const [nftObject, setNftObject] = React.useState(null)
@@ -49,8 +50,8 @@ export default function WalletScanNft() {
         body: JSON.stringify(data),
       })
       const nfts = await response.json()
-      // console.log('nfts', nfts)
 
+      console.log('nfts', nfts)
       const NFTsResponseInterface = nfts.map((item) => ({
         tokenId: item.tokenId,
         contractAddress: item.contract.address,
@@ -62,6 +63,11 @@ export default function WalletScanNft() {
         openSea: item.contract.openSea,
         attributes: item.rawMetadata.attributes,
         image: resolveLink(item.rawMetadata.image),
+        //if spaminfo map is not empty, then it is spam
+        //  isSpam: item?.spamInfo.length > 0 ? true : false,
+        // //map spaminfo to get the spam reason
+        spamInfo: item.spamInfo,
+        // spamReason: item.spamInfo.map((item) => item.reason),
       }))
       if (NFTsResponseInterface.length === 0) {
         setIsError(true)
@@ -81,6 +87,9 @@ export default function WalletScanNft() {
       <div className=" relative  mx-auto max-w-7xl py-1 px-6 sm:py-1 lg:px-8 lg:py-1">
         <div>
           <FormWallet handleSubmit={handleSubmit} title="Nft Wallet Scan" description="" />
+        </div>
+        <div className="flex min-h-full items-center justify-center py-2 px-6 sm:px-9 lg:px-8">
+          <SpamWarning />
         </div>
         {isError ? <AlertScan /> : null}
         {nftObject ? <NftImages nftList={nftObject} handleNftClick={handleNftClick} /> : null}

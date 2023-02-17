@@ -1,23 +1,23 @@
-//import Image from 'next/image'pointer
+import clsx from 'clsx'
 
 export default function NftImages({ nftList, handleNftClick }) {
-  //  console.log('nftList', nftList)
+  console.log('nftList', nftList)
 
   return (
     <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
       {nftList?.map((nft, index) => (
         <li
           key={index}
-          className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
+          className={clsx("col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg text-center shadow",
+          nft.spamInfo ? "bg-polyO4" : "bg-white" )}
         >
           <div className="flex flex-1 flex-col p-8">
             <button type="button" onClick={() => handleNftClick(nft)}>
               <img
                 width={160}
                 className=" mx-auto h-40 w-40 flex-shrink-0 transform  cursor-pointer transition duration-500 ease-in-out hover:scale-105 hover:bg-poly2 hover:shadow-lg"
-   
                 src={nft.image}
-                alt="NFT Image"
+                alt="NFT Image Missing"
               />
             </button>
             <h3 className="mt-6 text-sm font-medium text-gray-900">{nft.name}</h3>
